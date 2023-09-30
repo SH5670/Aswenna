@@ -15,9 +15,9 @@
 </head>
 
 <body>
-    <div class="container-fluid mt-5 d-flex justify-content-center">
+    <div class="container-fluid d-flex justify-content-center vh-100">
 
-        <div class="row main mt-4 align-items-center">
+        <div class="row main align-items-center">
 
             <div class="col-12 justify-content-center">
                 <div class="row">
