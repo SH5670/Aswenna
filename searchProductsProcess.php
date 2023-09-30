@@ -3,6 +3,7 @@
 require "connection.php";
 
 $searchText = $_GET["searchText"];
+
 $loadWithoutCity = "false";
 
 if (isset($_SESSION["u"])) {
@@ -11,7 +12,7 @@ if (isset($_SESSION["u"])) {
 
     $user_address_rs = Database::search("SELECT * FROM `address` INNER JOIN `city` ON
                                         `city`.`id`=`address`.`city_id` INNER JOIN `district` ON
-                                        `district`.`id`= `city`.`district_id` WHERE `user_email`='" . $user_id . "'");
+                                        `district`.`id`= `city`.`district_id` WHERE `user_id`='" . $user_id . "'");
 
     $user_address_num = $user_address_rs->num_rows;
 

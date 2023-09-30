@@ -19,10 +19,10 @@
             <div class="col-12 my-2">
                 <div class="row justify-content-end">
                     <div class="col-5">
-                        <input type="text" class="form-control form-control-sm" placeholder="Search Products">
+                        <input type="text" class="form-control form-control-sm" placeholder="Search Products" id="searchText">
                     </div>
                     <div class="col-1 d-grid">
-                        <button class="btn btn-sm fw-semibold" style="background-color: #f0df0d;">Search</button>
+                        <button class="btn btn-sm fw-semibold" style="background-color: #f0df0d;" onclick="searchProducts();">Search</button>
                     </div>
                     <div class="col-2 d-grid">
                         <button class="btn fw-semibold btn-sm" style="background-color: #c0c0c0;">Search Farmers</button>
