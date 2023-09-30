@@ -83,10 +83,3 @@ function signIn() {
 
     }
 }
-function changeView() {
-    var signUp = document.getElementById("signUpModal");
-    var signIn = document.getElementById("signInModal");
-
-    bModel = new bootstrap.Modal(signUp);
-    bModel.show();
-}
