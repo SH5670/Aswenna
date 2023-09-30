@@ -132,6 +132,11 @@
                                             <button type="button" class="btn btn-primary btn-sm">Sign In</button>
                                         </div>
 
+                                        <div class="col-6">
+                                            <input type="checkbox">
+                                            <span>Remember me ?</span>
+                                        </div>
+
                                         <div class="col-12 mt-3">
                                             <span  class="">Already Have An Account ?</span> 
                                             <a href="" class="">Back to Login</a>
