@@ -103,7 +103,7 @@ function forgotPassword() {
 
     r.onreadystatechange = function () {
 
-        if (r.readyState == 4) {
+        if (r.readyState == 4 && r.status == 200) {
             var t = r.responseText;
             if (t == "Success") {
 
@@ -149,7 +149,7 @@ function resetPassword() {
 
     r.onreadystatechange = function () {
 
-        if (r.readyState == 4) {
+        if (r.readyState == 4 && r.status == 200) {
 
             var t = r.responseText;
             if (t == "success") {
@@ -185,7 +185,6 @@ function addProduct() {
     form.append("cost", cost);
     form.append("desc", desc);
 
-
     var file_count = image.files.length;
 
     for (var x = 0; x < file_count; x++) {
@@ -201,11 +200,54 @@ function addProduct() {
             alert(t);
 
         }
-
     }
 
-    request.open("POST","addProductProcess.php",true);
-    request.send(form); 
+    request.open("POST", "addProductProcess.php", true);
+    request.send(form);
+
+}
+
+function searchProducts() {
+
+    var searchText = document.getElementById("searchText");
+
+    var r = new XMLHttpRequest();
+
+    r.onreadystatechange = function () {
+        if (r.readyState == 4 && r.status == 200) {
+            var t = r.responseText;
+            document.getElementById("searchProductBody").innerHTML = t;
+        }
+    }
+
+    r.open("GET", "searchProductsProcess.php?searchText=" + searchText.value, true);
+    r.send();
+
+
+}
+
+function searchFarmers(){
+
+    var searchText = document.getElementById("searchFarmerText");
+    var district = document.getElementById("farmerDistrict");
+    var city = document.getElementById("farmerCity");
+
+    var f = new FormData();
+    f.append("txt",searchText);
+    f.append("dis",district);
+    f.append("city",city);
+
+    var r = new XMLHttpRequest();
+
+    r.onreadystatechange = function () {
+        if (r.readyState == 4 && r.status == 200) {
+            var t = r.responseText;
+            document.getElementById("searchFarmerBody").innerHTML = t;
+        }
+    }
+
+    r.open("POST", "searchFarmersProcess.php", true);
+    r.send(f);
 
 
 }
