@@ -16,8 +16,6 @@ function showSignUpModel() {
     bSignUpModel.show();
 }
 
-
-
 function SignUp() {
 
     var type = document.getElementById("type").value;
@@ -112,19 +110,17 @@ function forgotPassword() {
                 alert("Verification Code has sent to your email. Please check your inbox");
                 email.disabled = true;
 
-                var newPassword = document.getElementById("newPassword");
-                var resetPasswordBtn = document.getElementById("resetPassword");
-                var passwordField =document.getElementById("p");
-                var vcode = document.getElementById("vCode");
+               
+                
+                var passwordField =document.getElementById("p");                
                 var signInBtn = document.getElementById("signInBtn");
+                document.getElementById("newPwDiv").classList = "d-block";
+                document.getElementById("vCodeDiv").classList = "d-block";
+                document.getElementById("resetPassword").classList = "d-block col-12 d-grid mt-4";
 
                 passwordField.classList="d-none";
                 signInBtn.classList="d-none";
 
-                newPassword.classList="d-block";
-                vcode.classList="d-block";
-                resetPasswordBtn.classList="d-block";
-               
 
             } else {
                 alert(t);
@@ -158,7 +154,8 @@ function resetPassword() {
             var t = r.responseText;
             if (t == "success") {
                 alert("Password Changed Successfully. Please login with your New Password.");
-                window.location.reload();
+                
+                
             } else {
                 alert(t);
             }

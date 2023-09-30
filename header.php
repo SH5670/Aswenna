@@ -127,14 +127,14 @@
                                             <input type="password" class="form-control form-control-sm col-12" id="p">
                                         </div>
 
-                                        <div class=" col-12">
+                                        <div class=" col-12 d-none" id="newPwDiv">
                                             <label for="" class="col-12 mb-2">New Password</label>
-                                            <input type="password" class="form-control form-control-sm col-12 d-none" id="newPassword">
+                                            <input type="password" class="form-control form-control-sm col-12 " id="newPassword">
                                         </div>
 
-                                        <div class=" col-12">
+                                        <div class=" col-12 d-none" id="vCodeDiv">
                                             <label for="" class="col-12 mb-2">Verification Code</label>
-                                            <input type="text" class="form-control form-control-sm col-12 d-none" id="vCode">
+                                            <input type="text" class="form-control form-control-sm col-12 " id="vCode">
                                         </div>
 
 
@@ -144,7 +144,7 @@
                                         </div>
 
                                         <div class="col-6  mt-3 text-end">
-                                            <a class="" onclick="forgotPassword();">Forgot Password</a>
+                                            <a class="curser" onclick="forgotPassword();">Forgot Password</a>
                                         </div>
 
 
@@ -152,7 +152,7 @@
                                             <button type="button" class="btn btn-sm btn-primary " id="signInBtn">Sign In</button>
                                         </div>
 
-                                        <div class="col-12 d-grid mt-4">
+                                        <div class="col-12 d-grid mt-4 d-none" id="resetPassword">
                                             <button type="button" class="btn btn-sm btn-success " onclick="resetPassword();">Reset Password</button>
                                         </div>
 

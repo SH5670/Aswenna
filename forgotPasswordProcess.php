@@ -23,8 +23,8 @@ if(isset($_GET["e"])){
            $mail->IsSMTP();
            $mail->Host = 'smtp.gmail.com';
            $mail->SMTPAuth = true;
-           $mail->Username = 'dilanhansaja81@gmail.com';
-           $mail->Password = 'kfyqkhvdlzjxwkjl';
+           $mail->Username = 'eeee';
+           $mail->Password = 'ssssss';
            $mail->SMTPSecure = 'ssl';
            $mail->Port = 465;
            $mail->setFrom('dilanhansaja81@gmail.com', 'Reset Password');
