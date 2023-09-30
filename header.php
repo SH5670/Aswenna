@@ -85,7 +85,7 @@
 
                                         <div class="col-12 mt-3">
                                             <span class="">Already Have An Account ?</span>
-                                            <a href="" class=" text-decoration-none text-primary" onclick="changeToSignIn();">Back to Login</a>
+                                            <a href="" class="">Back to Login</a>
                                         </div>
 
 
@@ -110,8 +110,9 @@
                                 <h5 class="modal-title">Sign In</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
+
                             <div class="modal-body">
-                                <div class=" col-12">
+                                <div class=" col-12 ">
                                     <div class="row justify-content-center g-2">
 
 
@@ -126,22 +127,30 @@
                                             <input type="password" class="form-control form-control-sm col-12">
                                         </div>
 
-
+                                        
 
                                         <div class="col-12 d-grid mt-4">
-                                            <button type="button" class="btn btn-primary btn-sm">Sign In</button>
+                                            <button type="button" class="btn btn-sm btn-primary ">Sign In</button>
+                                        </div>
+
+                                        <div class="col-5">
+                                            <hr class="col-12">
+                                        </div>
+                                        <div class="col-1">Or</div>
+                                        <div class="col-5">
+                                            <hr class="col-12">
                                         </div>
 
                                         <div class="col-12 mt-3">
-                                            <span class="">New to Aswenna ?</span>
-                                            <a href="" class="text-decoration-none text-primary" onclick="changeToSignUp();">Sign Up Here</a>
+                                            <span  class="">Already Have An Account ?</span> 
+                                            <a href="" class="">Back to Login</a>
                                         </div>
 
 
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal-footer">
+                            <div class="modal-footer border-0">
 
                                 <!-- <button type="button" class="btn btn-primary">Sign Up</button> -->
                             </div>
