@@ -13,6 +13,7 @@
     </div>
 
     </div>
-    
+    <script src="bootstrap.bundle.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -23,16 +23,17 @@
                     <div class="col-1 py-2 text-center">About</div>
                     <div class="col-1 py-2 text-center">Store</div>
                     <div class="col-1 py-2 text-center">
-                    <span class="curser" onclick="showLoginModel();">Register</span>
+                        <span class="curser" onclick="showLoginModel();">Register</span>
                     </div>
                     <div class="col-1 py-2 text-center ">Cart</div>
                 </div>
 
+                //model
                 <div class="modal-dialog modal-dialog-centered" id="loginModel"></div>
             </div>
         </div>
     </div>
-
+    <script src="bootstrap.bundle.js"></script>
     <script src="script.js"></script>
 </body>
 
