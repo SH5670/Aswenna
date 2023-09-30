@@ -85,7 +85,7 @@
 
                                         <div class="col-12 mt-3">
                                             <span class="">Already Have An Account ?</span>
-                                            <a href="" class="">Back to Login</a>
+                                            <a  class="curser" onclick="showLoginModel();">Back to Login</a>
                                         </div>
 
 
@@ -134,7 +134,7 @@
                                         </div>
 
                                         <div class="col-6  mt-3 text-end">
-                                            <a href="" class="">Forgot Password</a>
+                                            <a class="" onclick="forgotPassword();">Forgot Password</a>
                                         </div>
 
 

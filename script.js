@@ -2,9 +2,11 @@ var bSignInModel;
 var bSignUpModel;
 
 function showLoginModel() {
+    
     var model = document.getElementById("signInModel");
     bSignInModel = new bootstrap.Modal(model);
     bSignInModel.show();
+    bSignUpModel.hide();
 }
 
 function showSignUpModel() {
@@ -93,4 +95,78 @@ function signIn() {
         }
 
     }
+}
+
+function forgotPassword() {
+
+    var email = document.getElementById("e");
+
+    var r = new XMLHttpRequest();
+
+    r.onreadystatechange = function () {
+
+        if (r.readyState == 4) {
+            var t = r.responseText;
+            if (t == "Success") {
+
+                alert("Verification Code has sent to your email. Please check your inbox");
+                email.disabled = true;
+
+                var newPassword = document.getElementById("newPassword");
+                var resetPasswordBtn = document.getElementById("resetPassword");
+                var passwordField =document.getElementById("p");
+                var vcode = document.getElementById("vCode");
+                var signInBtn = document.getElementById("signInBtn");
+
+                passwordField.classList="d-none";
+                signInBtn.classList="d-none";
+
+                newPassword.classList="d-block";
+                vcode.classList="d-block";
+                resetPasswordBtn.classList="d-block";
+               
+
+            } else {
+                alert(t);
+            }
+        }
+
+    }
+
+    r.open("GET", "forgotPasswordProcess.php?e=" + email.value, true);
+    r.send();
+
+}
+function resetPassword() {
+
+    var email = document.getElementById("e");
+    var np = document.getElementById("newPassword");
+    var vcode = document.getElementById("vCode");
+
+    var f = new FormData();
+
+    f.append("e", email.value);
+    f.append("np", np.value);
+    f.append("v", vcode.value);
+
+    var r = new XMLHttpRequest();
+
+    r.onreadystatechange = function() {
+
+        if (r.readyState == 4) {
+
+            var t = r.responseText;
+            if (t == "success") {
+                alert("Password Changed Successfully. Please login with your New Password.");
+                window.location.reload();
+            } else {
+                alert(t);
+            }
+
+        }
+    }
+
+    r.open("POST", "resetPassword.php", true);
+    r.send(f);
+
 }
