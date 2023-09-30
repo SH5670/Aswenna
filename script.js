@@ -216,13 +216,13 @@ function searchProducts() {
     r.onreadystatechange = function () {
         if (r.readyState == 4 && r.status == 200) {
             var t = r.responseText;
+            alert(t);
             document.getElementById("searchProductBody").innerHTML = t;
         }
     }
 
     r.open("GET", "searchProductsProcess.php?searchText=" + searchText.value, true);
     r.send();
-
 
 }
 

@@ -8,15 +8,16 @@ $loadWithoutCity = "false";
 if (isset($_SESSION["u"])) {
 
     $user_id = $_SESSION["u"]["id"];
+    
 
     $user_address_rs = Database::search("SELECT * FROM `address` INNER JOIN `city` ON
                                         `city`.`id`=`address`.`city_id` INNER JOIN `district` ON
-                                        `district`.`id`= `city`.`district_id` WHERE `user_email`='" . $user_id . "'");
+                                        `district`.`id`= `city`.`district_id` WHERE `user_id`='" . $user_id . "'");
 
     $user_address_num = $user_address_rs->num_rows;
 
 
-    if ($user_address_num > 1) { // load products by user city
+    if ($user_address_num == 1) { // load products by user city
 
         $loadWithoutCity = "false";
 
@@ -37,14 +38,34 @@ if (isset($_SESSION["u"])) {
 
             $product_data1 = $product_rs1->fetch_assoc();
 
-            //design eka add karanna product 1 ka
-        }
+?>
 
-    } else {  
+            <div class="card col-2">
+                <img src="resources/yellowBellpepper.png" style="" class="card-img-top" alt="...">
+
+                <div class="col-12 text-center" style="height: 50px;">
+                    <span class="card-title fs-6"><?php echo $product_data1["name"]?></span>
+                </div>
+
+                <div class="col-12 text-center">
+
+                    <span class="fw-semibold">Rs.<?php echo $product_data1["price"]?></span><br>
+                    <span class=" text-success"><?php echo $product_data1["qty"]?> Items Available</span>
+                    <div class="row">
+                        <div class="col-12 d-grid mb-3 mt-1">
+                            <button class="btn btn-sm text-white" style="background-color: #008000;">Add To Cart &nbsp; <i class="bi bi-cart-plus fs-6"></i></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+<?php
+        }
+    } else {
 
         $loadWithoutCity = "true";
     }
-
 } else {
 
     $loadWithoutCity = "true";
@@ -59,6 +80,28 @@ if ($loadWithoutCity == "true") {
 
         $product_data2 = $product_rs2->fetch_assoc();
 
-        //design eka add karanna product 1 ka
+    ?>
+    
+    <div class="card col-2">
+                <img src="resources/yellowBellpepper.png" style="" class="card-img-top" alt="...">
+
+                <div class="col-12 text-center" style="height: 50px;">
+                    <span class="card-title fs-6"><?php echo $product_data2["name"]?></span>
+                </div>
+
+                <div class="col-12 text-center">
+
+                    <span class="fw-semibold">Rs.<?php echo $product_data2["price"]?>.00</span><br>
+                    <span class=" text-success"><?php echo $product_data2["price"]?> Items Available</span>
+                    <div class="row">
+                        <div class="col-12 d-grid mb-3 mt-1">
+                            <button class="btn btn-sm text-white" style="background-color: #008000;">Add To Cart &nbsp; <i class="bi bi-cart-plus fs-6"></i></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    
+    <?php
     }
 }
