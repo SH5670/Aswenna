@@ -151,7 +151,7 @@
                                         </div>
 
                                         <div class="col-12 d-grid ">
-                                            <button type="button" class="btn btn-sm text-dark fw-semibold" style="background-color: #d1d1d1;">Sign Up</button>
+                                            <button type="button" class="btn btn-sm text-dark fw-semibold" style="background-color: #d1d1d1;" onclick="showSignUpModel();">Sign Up</button>
                                         </div>
 
 
