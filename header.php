@@ -118,18 +118,28 @@
 
                                         <div class=" col-12">
                                             <label for="" class="col-12 mb-2">Email</label>
-                                            <input type="email" class="form-control form-control-sm col-12">
+                                            <input type="email" class="form-control form-control-sm col-12" id="e">
                                         </div>
 
 
                                         <div class=" col-12">
                                             <label for="" class="col-12 mb-2">Password</label>
-                                            <input type="password" class="form-control form-control-sm col-12">
+                                            <input type="password" class="form-control form-control-sm col-12" id="p">
+                                        </div>
+
+                                        <div class=" col-12">
+                                            <label for="" class="col-12 mb-2">New Password</label>
+                                            <input type="password" class="form-control form-control-sm col-12 d-none" id="newPassword">
+                                        </div>
+
+                                        <div class=" col-12">
+                                            <label for="" class="col-12 mb-2">Verification Code</label>
+                                            <input type="text" class="form-control form-control-sm col-12 d-none" id="vCode">
                                         </div>
 
 
                                         <div class="col-6 mt-3">
-                                            <input type="checkbox">
+                                            <input type="checkbox" id="r">
                                             <span> Remember me ?</span>
                                         </div>
 
@@ -139,7 +149,11 @@
 
 
                                         <div class="col-12 d-grid mt-4">
-                                            <button type="button" class="btn btn-sm btn-primary ">Sign In</button>
+                                            <button type="button" class="btn btn-sm btn-primary " id="signInBtn">Sign In</button>
+                                        </div>
+
+                                        <div class="col-12 d-grid mt-4">
+                                            <button type="button" class="btn btn-sm btn-success " onclick="resetPassword();">Reset Password</button>
                                         </div>
 
                                         <div class="col-5">
