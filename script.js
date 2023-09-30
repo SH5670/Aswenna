@@ -1,8 +1,8 @@
 var bModel;
-function showLoginModel(){
-    alert("hello");
 
+function showLoginModel(){
 var model = document.getElementById("loginModel");
-bModel= new bootstrap.Model(model);
+model = document.getElementById("loginModel");
+bModel = new bootstrap.Modal(model);
 bModel.show();
 }
