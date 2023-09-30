@@ -2,7 +2,7 @@ var bSignInModel;
 var bSignUpModel;
 
 function showLoginModel() {
-    
+
     var model = document.getElementById("signInModel");
     bSignInModel = new bootstrap.Modal(model);
     bSignInModel.show();
@@ -27,7 +27,7 @@ function SignUp() {
 
     var form = new FormData();
 
-    
+
     // if(status=="1"){
     //     var line1 = document.getElementById("line1").value;
     //     var line2 = document.getElementById("line2").value;
@@ -85,8 +85,8 @@ function signIn() {
         if (r.readyState == 4) {
             var t = request.responseText;
             if (t == "Success") {
-                
-             } else {
+
+            } else {
                 alert(t);
             }
 
@@ -110,16 +110,16 @@ function forgotPassword() {
                 alert("Verification Code has sent to your email. Please check your inbox");
                 email.disabled = true;
 
-               
-                
-                var passwordField =document.getElementById("p");                
+
+
+                var passwordField = document.getElementById("p");
                 var signInBtn = document.getElementById("signInBtn");
                 document.getElementById("newPwDiv").classList = "d-block";
                 document.getElementById("vCodeDiv").classList = "d-block";
                 document.getElementById("resetPassword").classList = "d-block col-12 d-grid mt-4";
 
-                passwordField.classList="d-none";
-                signInBtn.classList="d-none";
+                passwordField.classList = "d-none";
+                signInBtn.classList = "d-none";
 
 
             } else {
@@ -147,15 +147,15 @@ function resetPassword() {
 
     var r = new XMLHttpRequest();
 
-    r.onreadystatechange = function() {
+    r.onreadystatechange = function () {
 
         if (r.readyState == 4) {
 
             var t = r.responseText;
             if (t == "success") {
                 alert("Password Changed Successfully. Please login with your New Password.");
-                
-                
+
+
             } else {
                 alert(t);
             }
@@ -165,5 +165,47 @@ function resetPassword() {
 
     r.open("POST", "resetPassword.php", true);
     r.send(f);
+
+}
+
+function addProduct() {
+
+    var cat = document.getElementById("category").value;
+    var title = document.getElementById("title").value;
+    var qty = document.getElementById("qty").value;
+    var cost = document.getElementById("cost").value;
+    var desc = document.getElementById("description").value;
+    var image = document.getElementById("imageuploader");
+
+    var form = new FormData();
+
+    form.append("cat", cat);
+    form.append("title", title);
+    form.append("qty", qty);
+    form.append("cost", cost);
+    form.append("desc", desc);
+
+
+    var file_count = image.files.length;
+
+    for (var x = 0; x < file_count; x++) {
+        form.append("image" + x, image.files[x]);
+    }
+
+    var request = XMLHttpRequest();
+
+    request.onreadystatechange = function () {
+
+        if (r.readyState == 4) {
+            var t = request.responseText;
+            alert(t);
+
+        }
+
+    }
+
+    request.open("POST","addProductProcess.php",true);
+    request.send(form); 
+
 
 }
