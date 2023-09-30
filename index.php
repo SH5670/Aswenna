@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <title>Document</title>
+    <title>Aswenna | Home</title>
 </head>
 
 <body>
@@ -22,10 +22,10 @@
                         <input type="text" class="form-control form-control-sm" placeholder="Search Products">
                     </div>
                     <div class="col-1 d-grid">
-                        <button class="btn btn-primary btn-sm">Search</button>
+                        <button class="btn btn-sm fw-semibold" style="background-color: #f0df0d;">Search</button>
                     </div>
                     <div class="col-2 d-grid">
-                        <button class="btn btn-primary btn-sm">Search Farmers</button>
+                        <button class="btn fw-semibold btn-sm" style="background-color: #c0c0c0;">Search Farmers</button>
                     </div>
                 </div>
             </div>
@@ -61,11 +61,11 @@
             <!-- Start Seasonal Product Div -->
             <div class=" col-12 ">
                 <div class="row">
-                    <div class=" col-12 mt-2 text-center my-3">
+                    <div class=" col-12 text-center my-4">
                         <span class="fs-3 fw-semibold">Seasonal Products</span>
                     </div>
 
-                    <div class="col-12 mb-5">
+                    <div class="col-12 mb-3">
                         <div class="row justify-content-center gap-3">
 
                             <div class="card col-2">
@@ -163,6 +163,11 @@
 
                                 </div>
                             </div>
+    
+
+                            <div class="col-12 text-center mt-1">
+                                <a class="fs-6">See All</a>
+                            </div>
 
 
                         </div>
@@ -171,7 +176,38 @@
             </div>
             <!-- Start Seasonal Product Div -->
 
+            <div class=" col-12  p-0">
+                <img src="resources/banner2.png" style="width: 100%;">
+            </div>
 
+            <div class=" col-12 mt-4 mb-4">
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 col-6 text-center">
+                        <span><i class="bi bi-truck fs-1 text-success"></i></span><br>
+                        <span class="fs-5 fw-semibold"> Free Delivery</span><br>
+                        <span class=" text-black-50">for orders above Rs.7500.00 </span>
+                    </div>
+                    <div class="col-lg-3 col-6 text-center">
+                        <span><i class="bi bi-telephone text-primary fs-1"></i></span><br>
+                        <span class="fs-5 fw-semibold">Customer Service</span><br>
+                        <span class=" text-black-50">Mon - Sun 9am-5pm</span>
+                    </div>
+                    <div class="col-lg-3 col-6 text-center">
+                        <span><i class="bi bi-basket fs-1 text-warning"></i></span><br>
+                        <span class="fs-5 fw-semibold">Over 2000 <br class=" d-lg-none d-block">
+                            Products</span><br>
+                        <span class=" text-black-50">largest selection of groceries</span>
+                    </div>
+                    <div class="col-lg-3 col-6 text-center">
+                        <span><i class="bi bi-shield-shaded fs-1 text-info"></i></span><br>
+                        <span class="fs-5 fw-semibold">100% Secure Payments</span><br>
+                        <span class=" text-black-50">ensured by Square Payments</span>
+                    </div>
+                </div>
+            </div>
+
+            
+            <?php include "footer.php"; ?>
         </div>
 
     </div>
