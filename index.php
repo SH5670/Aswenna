@@ -214,6 +214,8 @@ require "connection.php";
             <?php include "footer.php"; ?>
 
         </div>
+    <div>
+        <p>Hello</p>
     </div>
 
     <script src="bootstrap.bundle.js"></script>
