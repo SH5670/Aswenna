@@ -1,183 +1,223 @@
-<!doctype html>
+<?php
+require "connection.php";
+?>
+<!DOCTYPE html>
 <html>
 
 <head>
-    <title>eMan</title>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
-
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="icon" href="resources/logo/logo.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifect | home</title>
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="icon" href="resources/cimg/lifect_icon.png" />
 </head>
 
 <body>
-    <div class="container-fluid d-flex justify-content-center vh-100">
-
-        <div class="row justify-content-center align-items-center">
-
-            <div class="col-11 justify-content-center d-flex main">
-                <div class="row">
-
-                    <div class="d-md-none d-lg-none" style="height:140px ;">
-                        <img class="mx-5 px-4 " src="resources/logo_badge/logo_badge.png" style="height: 200px;">
-                    </div>
-
-                    <!-- sign up -->
-                    <div class="col-md-6 mt-lg-4" id="SignUp">
-                        <h1 class="display-4 text-center">Sign up</h1>
-                        <form class="row p-4">
-                            <div class="col-12">
-
-                                <div class="row">
-                                    <div class="col-6 form-group">
-                                        <label>First name</label>
-                                        <input type="text" id="fname">
-                                    </div>
-
-                                    <div class="col-6 form-group">
-                                        <label>Last name</label>
-                                        <input type="text" id="lname">
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-6 form-group">
-                                        <label>Mobile Number</label>
-                                        <input type="text" id="mobile">
-                                    </div>
-                                    <div class="col-6 form-group">
-                                        <label>Gender</label>
-                                        <select class="text-center" style="font-size: 18px; color: rgba(58, 58, 58);">
-                                            <option value="1" style="  background-color: transparent">Male</option>
-                                            <option value="2" style="  background-color: transparent">Female</option>
-
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 form-group">
-                                    <label>Email</label>
-                                    <input type="email" id="email">
-                                </div>
-
-                                <div class="row">
-
-                                    <div class="col-6 form-group">
-                                        <label>Type Password</label>
-                                        <input type="password" id="pw1">
-                                    </div>
-
-                                    <div class="col-6 form-group">
-                                        <label>Retype Password</label>
-                                        <input type="password" id="pw2">
-                                    </div>
-                                </div>
+    <div class=" container-fluid">
+        <div class="row ">
+            <?php include "header.php"; ?>
 
 
+
+            <div class=" col-12 py-2" style="background-color: #17A589   ;">
+                <div class=" row ">
+
+
+                    <!-- offcanvas -->
+                    <div class=" col-lg-3 col-2">
+                        <button class="btn" style="background-color:#E5E8E8;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="bi bi-justify"></i></button>
+
+                        <div class="offcanvas offcanvas-start w-auto" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                            <div class="offcanvas-header border-bottom " style="background-color: #17A589   ;">
+                                <img src="resources/cimg/lifect_icon.png" height="50px" alt="">
+                                <h4 class="offcanvas-title text-white" id="offcanvasWithBothOptionsLabel" style="margin-left: 25px;">Welcome to Lifect !</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                             </div>
-                            <div class="col-12">
-                                <div class="row">
-                                    <div class="col-6 mt-3 ">
-                                        <button class="col-12" onclick="register();">Register</button>
+                            <div class="offcanvas-body">
+
+                                <div class=" col-12">
+                                    <div class="row">
+                                        <div class=" col-12">
+                                            <span><i class="bi bi-info-circle "></i>&nbsp; About Us</span>
+                                            <hr>
+                                        </div>
+                                        <div class=" col-12">
+                                            <span><i class="bi bi-cart2 "></i>&nbsp; Cart</span>
+                                            <hr>
+                                        </div>
+                                        <div class=" col-12">
+                                            <span onclick="window.location='advancedSearch.php';"><i class="bi bi-search"></i>&nbsp; Advanced Search</span>
+                                            <hr>
+                                        </div>
+                                        <div class=" col-12">
+                                            <span><i class="bi bi-bookmarks"></i>&nbsp; All Categories</span>
+                                            <hr>
+                                        </div>
                                     </div>
 
-                                    <div class="col-6 mt-4 text-center">
-                                        <a class="links text-decoration-none fs-6" href="#" id="loginLink">Already have an Account</a>
+                                </div>
+
+                                <?php
+                                $category_rs = Database::search("SELECT * FROM `category` ");
+                                $category_num = $category_rs->num_rows;
+
+                                for ($m = 0; $m < $category_num; $m++) {
+                                    $category_data = $category_rs->fetch_assoc();
+                                ?>
+                                    <div class=" col-lg-12">
+                                        <option class=" offcanvasdiv py-2 px-2"><?php echo $category_data["name"]; ?>
+                                        </option>
                                     </div>
-                                </div>
-                            </div>
+                                <?php
+                                }
 
-                        </form>
-
-                    </div>
-                    <!-- sign in -->
-
-                    <div class="col-md-6 col-12 p-5" id="login">
-                        <h1 class="col-12 display-4 text-center">Login</h1>
-                        <form class="col-12 d-flex justify-content-center mt-4 p-3">
-                            <div class="col-12">
-
-                                <div class="col-12 form-group">
-                                    <label>Email</label>
-                                    <input type="email">
-                                </div>
-
-                                <div class="col-12 form-group">
-                                    <label>Password</label>
-                                    <input type="password">
-                                </div>
-
-                                <div class="col-12 form-check mt-2">
-                                    <input class="form-check-input" type="checkbox">
-                                    <span class="form-check-label fs-6">Remember Me</span>
-                                </div>
-
-                                <div class="col-12 mt-3">
-                                    <button class="col-12">Login</button>
-                                </div>
-                                <div class="col-12">
-                                    <div class="row p-3">
-                                        <a class="links col-12 col-lg-6 fs-6  text-sm-center" href="#" id="registerLink">Create an Account</a>
-                                        <a class="links col-12 col-lg-6 fs-6  text-sm-center" href="#" onclick="forgotPassword();">Forgot Password</a>
-
-                                    </div>
-                                </div>
-
-                            </div>
-                        </form>
-                    </div>
-                    <div class="video-container " id="overlay">
-                        <video autoplay muted loop>
-                            <source src="resources/video.mp4" type="video/mp4" />
-
-                        </video>
-                        <div class="caption"></div>
-
-                    </div>
-
-                    <!-- Modal -->
-                    <div class="modal" id="forgotPasswordModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5">Modal title</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <input type="text">
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Understood</button>
-                                </div>
+                                ?>
                             </div>
                         </div>
                     </div>
+                    <!-- offcanvas -->
 
-                    <!-- Modal -->
 
-                    <!-- footer -->
-
-                    <div class="col-12 col-lg-12 fixed-bottom d-none d-lg-block">
-                        <div class="row">
-                            <p class="offset-4 col-4 text-center">&copy; 2022 eman.lk || All Right Reserved</p>
-                            <p class="offset-2 col-2 text-center admin" onclick="window.location='admin.php';"><i class="bi bi-person-workspace"></i> &nbsp;Admin Login </p>
-                        </div>
+                    <div class=" col-lg-6 col-7" >
+                        <input type="text" class="form-control" placeholder=" Search" style="background-color: white;" id="shopInput">
                     </div>
-                    <!-- footer -->
+                    <div class=" col-1 d-grid d-lg-block d-none  ">
+                        <button type="button" class="btn btn-light  fw-bold " onclick="searchFromShop();">Search</button>
+                    </div>
+                    <div class=" col-1 d-grid d-lg-block d-none ">
+                        <button type="button" class="btn btn-dark  fw-bold " onclick="window.location='advancedSearch.php';">Advanced</button>
+                    </div>
+                    <div class=" col-2 d-grid  d-lg-none d-block">
+                        <button type="button" class="btn btn-warning btn-sm text-white fw-bold rounded-0"><i class="bi bi-search"></i></button>
+                    </div>
+
 
                 </div>
             </div>
+
+
+
+
+            <div class=" col-12">
+                <div class="row gap-2 justify-content-center" id="content">
+
+
+                    <div class=" col-12 mb-4  p-0 ">
+                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="resources/cimg/shopnow.jpg" class="d-block w-100" alt="...">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="resources/cimg/shopnow_spices.jpg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class=" col-12 text-center">
+                        <span class=" fs-3 fw-semibold">Your Grocery List in One Place</span>
+                    </div>
+                    <div class=" col-12 text-center">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-4 col-10  d-grid mt-3">
+                                <button type="button" class="btn  py-2 fs-5 text-white" style="background-color: #2ECC71;" onclick="window.location='shop.php';">Shop Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class=" col-12 mt-4 mb-4">
+                        <div class="row justify-content-center">
+                            <div class=" col-lg-6 col-12 mb-lg-0 mb-3">
+                                <img src="resources/cimg/shopnow2.png" class="c border " style="width: 100%;" alt="" onclick="window.location='shop.php';">
+                            </div>
+                            <div class="  col-lg-6 col-12">
+                                <img src="resources/cimg/shopnow3.jpg" class="c border " style="width: 100%;" alt="" onclick="window.location='shop.php';">
+                            </div>
+
+
+                            <div class=" col-12 text-center ">
+                                <p class="mt-5  fs-2 fw-semibold">Food with heart. Made with care.</p>
+                            </div>
+
+                            <div class=" col-5 mb-lg-0 mt-4 mb-3">
+                                <img src="resources/cimg/bakershop_now2.jpg" style="width: 100%;" alt="" onclick="window.location='shop.php';">
+                            </div>
+                            <div class=" col-5 mb-lg-0 mt-4 mb-3">
+                                <img src="resources/cimg/bakershop_now3.jpg" style="width: 100%;" alt="" onclick="window.location='shop.php';">
+                            </div>
+
+
+                            <div class=" col-12 mt-4 mb-4">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-3 col-6 text-center">
+                                        <span><i class="bi bi-truck fs-1 text-success"></i></span><br>
+                                        <span class="fs-5 fw-semibold"> Free Delivery</span><br>
+                                        <span class=" text-black-50">for orders above Rs.2000.00 </span>
+                                    </div>
+                                    <div class="col-lg-3 col-6 text-center">
+                                        <span><i class="bi bi-telephone text-primary fs-1"></i></span><br>
+                                        <span class="fs-5 fw-semibold">Customer Service</span><br>
+                                        <span class=" text-black-50">Mon - Sun 9am-5pm</span>
+                                    </div>
+                                    <div class="col-lg-3 col-6 text-center">
+                                        <span><i class="bi bi-basket fs-1 text-warning"></i></span><br>
+                                        <span class="fs-5 fw-semibold">Over 2000 <br class=" d-lg-none d-block">
+                                            Products</span><br>
+                                        <span class=" text-black-50">largest selection of groceries</span>
+                                    </div>
+                                    <div class="col-lg-3 col-6 text-center">
+                                        <span><i class="bi bi-shield-shaded fs-1 text-info"></i></span><br>
+                                        <span class="fs-5 fw-semibold">100% Secure Payments</span><br>
+                                        <span class=" text-black-50">ensured by Square Payments</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class=" col-12 text-center ">
+                                <p class="mt-5  fs-2 fw-semibold">A Moments of Healthy Juice</p>
+                            </div>
+
+                            <div class=" col-lg-9 col-12 text-center">
+                                <img src="resources/cimg/fresh_juice.jpg" style="width: 100%;" alt="">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <?php include "footer.php"; ?>
+
         </div>
     </div>
 
-
     <script src="bootstrap.bundle.js"></script>
-    <script src="index.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
