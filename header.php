@@ -134,7 +134,7 @@
                                         </div>
 
                                         <div class="col-6  mt-3 text-end">
-                                            <a href="" class="">Forgot Password</a>
+                                            <a class="" onclick="forgotPassword();">Forgot Password</a>
                                         </div>
 
 
