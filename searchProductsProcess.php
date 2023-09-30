@@ -3,6 +3,7 @@
 require "connection.php";
 
 $searchText = $_GET["searchText"];
+
 $loadWithoutCity = "false";
 
 if (isset($_SESSION["u"])) {
