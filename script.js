@@ -2,9 +2,11 @@ var bSignInModel;
 var bSignUpModel;
 
 function showLoginModel() {
+    
     var model = document.getElementById("signInModel");
     bSignInModel = new bootstrap.Modal(model);
     bSignInModel.show();
+    bSignUpModel.hide();
 }
 
 function showSignUpModel() {
