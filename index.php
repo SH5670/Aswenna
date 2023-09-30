@@ -17,9 +17,9 @@
 <body>
     <div class="container-fluid d-flex justify-content-center vh-100">
 
-        <div class="row main align-items-center">
+        <div class="row justify-content-center align-items-center">
 
-            <div class="col-12 justify-content-center">
+            <div class="col-11 justify-content-center d-flex main">
                 <div class="row">
 
                     <div class="d-md-none d-lg-none" style="height:140px ;">
