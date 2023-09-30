@@ -6,10 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="  d-flex container-fluid justify-content-center vh-100">
+    <div class="container-fluid justify-content-center vh-100">
 
     <div class="row ">
-        
+        <?php include "header.php"; ?>
     </div>
 
     </div>

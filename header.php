@@ -11,12 +11,15 @@
     <div class="container-fluid  justify-content-center">
         <div class="row">
             <div class="col-12">
-                <div class="row  text-white fw-semibold" style="background-color: #27AE60;">
-                    <div class="col-5 py-2">Icon</div>
+                <div class="row  fw-semibold bg-info align-items-center" >
+                    <!-- style="background-color: #27AE60;" -->
+                    <div class="col-5 py-2">
+                        <img src="resources/logo.png" style="width: 50px;" alt="">
+                    </div>
                     <div class="col-1 py-2 text-center">Home</div>
                     <div class="col-1 py-2 text-center">About</div>
                     <div class="col-1 py-2 text-center">Store</div>
-                    <div class="col-1 py-2 text-center">Register</div>
+                    <div class="col-1 py-2 text-center" onclick="">Register</div>
                     <div class="col-1 py-2 text-center ">Cart</div>
                 </div>
             </div>
