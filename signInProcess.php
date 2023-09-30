@@ -18,9 +18,9 @@ if (empty($email)) {
     echo ("Pasword must have between 5-20 characters.");
 } else {
     $rs =  Database::search("SELECT * FROM `user` WHERE `email` = '" . $email . "' AND `password` = '" . $password . "'");
-    $n = $rs->num_rows;
+    $num = $rs->num_rows;
 
-    if ($n == 1) {
+    if ($num == 1) {
 
         echo ("Success");
         

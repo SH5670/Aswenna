@@ -84,10 +84,10 @@
                                         </div>
 
                                         <div class="col-12 mt-3">
-                                            <span  class="">Already Have An Account ?</span> 
-                                            <a href="" class="">Back to Login</a>
+                                            <span class="">Already Have An Account ?</span>
+                                            <a href="" class=" text-decoration-none text-primary" onclick="changeToSignIn();">Back to Login</a>
                                         </div>
-                                        
+
 
                                     </div>
                                 </div>
@@ -103,7 +103,7 @@
 
 
                 <!--Start SignIn Modal -->
-                <div class="modal" tabindex="-1" id="loginModel">
+                <div class="modal" tabindex="-1" id="signInModel">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -113,30 +113,30 @@
                             <div class="modal-body">
                                 <div class=" col-12">
                                     <div class="row justify-content-center g-2">
-                                       
+
 
                                         <div class=" col-12">
                                             <label for="" class="col-12 mb-2">Email</label>
                                             <input type="email" class="form-control form-control-sm col-12">
                                         </div>
-                                                                                
+
 
                                         <div class=" col-12">
                                             <label for="" class="col-12 mb-2">Password</label>
                                             <input type="password" class="form-control form-control-sm col-12">
                                         </div>
 
-                                        
+
 
                                         <div class="col-12 d-grid mt-4">
                                             <button type="button" class="btn btn-primary btn-sm">Sign In</button>
                                         </div>
 
                                         <div class="col-12 mt-3">
-                                            <span  class="">Already Have An Account ?</span> 
-                                            <a href="" class="">Back to Login</a>
+                                            <span class="">New to Aswenna ?</span>
+                                            <a href="" class="text-decoration-none text-primary" onclick="changeToSignUp();">Sign Up Here</a>
                                         </div>
-                                        
+
 
                                     </div>
                                 </div>
