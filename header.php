@@ -103,7 +103,7 @@
  
 
                 <!--Start SignIn Modal -->
-                <div class="modal" tabindex="-1" id="loginModel">
+                <div class="modal" tabindex="-1" id="signInModel">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -127,16 +127,7 @@
                                             <input type="password" class="form-control form-control-sm col-12">
                                         </div>
 
-
-                                        <div class="col-6 mt-3">
-                                            <input type="checkbox">
-                                            <span> Remember me ?</span>
-                                        </div>
-
-                                        <div class="col-6  mt-3 text-end">
-                                            <a href="" class="">Forgot Password</a>
-                                        </div>
-
+                                        
 
                                         <div class="col-12 d-grid mt-4">
                                             <button type="button" class="btn btn-sm btn-primary ">Sign In</button>
@@ -150,8 +141,9 @@
                                             <hr class="col-12">
                                         </div>
 
-                                        <div class="col-12 d-grid ">
-                                            <button type="button" class="btn btn-sm text-dark fw-semibold" style="background-color: #d1d1d1;">Sign Up</button>
+                                        <div class="col-12 mt-3">
+                                            <span  class="">Already Have An Account ?</span> 
+                                            <a href="" class="">Back to Login</a>
                                         </div>
 
 

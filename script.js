@@ -1,8 +1,8 @@
 var bModel;
 
 function showLoginModel() {
-    var model = document.getElementById("loginModel");
-    model = document.getElementById("loginModel");
+    var model = document.getElementById("signInModel");
+    model = document.getElementById("signInModel");
     bModel = new bootstrap.Modal(model);
     bModel.show();
 }
@@ -82,7 +82,11 @@ function signIn() {
         }
 
     }
+}
+function changeView() {
+    var signUp = document.getElementById("signUpModal");
+    var signIn = document.getElementById("signInModal");
 
-
-
+    bModel = new bootstrap.Modal(signUp);
+    bModel.show();
 }
