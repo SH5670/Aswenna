@@ -100,7 +100,7 @@
                     </div>
                 </div>
                 <!-- End SignUp modal -->
-
+ 
 
                 <!--Start SignIn Modal -->
                 <div class="modal" tabindex="-1" id="loginModel">
