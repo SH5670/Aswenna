@@ -1,11 +1,20 @@
-var bModel;
+var bSignInModel;
+var bSignUpModel;
 
 function showLoginModel() {
     var model = document.getElementById("signInModel");
-    model = document.getElementById("signInModel");
-    bModel = new bootstrap.Modal(model);
-    bModel.show();
+    bSignInModel = new bootstrap.Modal(model);
+    bSignInModel.show();
 }
+
+function showSignUpModel() {
+    bSignInModel.hide();
+    var model2 = document.getElementById("signUpModel");
+    bSignUpModel = new bootstrap.Modal(model2);
+    bSignUpModel.show();
+}
+
+
 
 function SignUp() {
 
