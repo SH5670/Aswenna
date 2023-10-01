@@ -14,7 +14,7 @@
 <body>
     <div class="container-fluid justify-content-center vh-100">
 
-        <div class="row ">
+        <div class="row justify-content-center">
             <?php include "header.php"; ?>
 
             <div class=" col-12 mb-3 mt-3">
@@ -24,13 +24,23 @@
             <hr>
 
             <!-- Start Product List Div -->
-            <div class="col-10 mt-2">
+            <div class="col-lg-9 col-11 mt-2">
                 <div class="row gap-2 justify-content-center">
 
 
                     <!-- product Card -->
-                    <div class="card mb-3" style="max-width: 540px;">
+                    <div class="card mb-3" style="max-width: 480px;">
                         <div class="row g-0">
+
+                            <div class="col-12 d-lg-none d-md-none d-block mt-2">
+                                <div class="row">
+                                    <div class="col-12 text-end ">
+                                        <span><i class="bi bi-x-circle"></i></span>
+                                    </div>
+
+                                </div>
+                            </div>
+
                             <div class="col-md-4">
                                 <img src="resources/yellowBellpepper.png" class="img-fluid rounded-start" alt="...">
                             </div>
@@ -38,7 +48,7 @@
                                 <div class="card-body">
                                     <div class="col-12">
                                         <div class="row">
-                                            <div class="col-12 text-end">
+                                            <div class="col-12 text-end d-lg-block d-md-block d-none">
                                                 <span><i class="bi bi-x-circle"></i></span>
                                             </div>
 
@@ -57,7 +67,7 @@
                                                 <div class="col-4 d-grid">
                                                     <button class="btn btn-success btn-sm ">Buy Now</button>
                                                 </div>
-                                                <div class="col-1 d-grid">
+                                                <div class="col-1 d-grid ">
                                                     <button class="btn btn-light btn-sm "><i class="bi bi-heart-fill text-danger"></i></button>
                                                 </div>
                                             </div>
@@ -70,8 +80,18 @@
                     <!-- product Card -->
 
                     <!-- product Card -->
-                    <div class="card mb-3" style="max-width: 540px;">
+                    <div class="card mb-3" style="max-width: 480px;">
                         <div class="row g-0">
+
+                            <div class="col-12 d-lg-none d-md-none d-block mt-2">
+                                <div class="row">
+                                    <div class="col-12 text-end ">
+                                        <span><i class="bi bi-x-circle"></i></span>
+                                    </div>
+
+                                </div>
+                            </div>
+
                             <div class="col-md-4">
                                 <img src="resources/broccali.png" class="img-fluid rounded-start" alt="...">
                             </div>
@@ -79,7 +99,7 @@
                                 <div class="card-body">
                                     <div class="col-12">
                                         <div class="row">
-                                            <div class="col-12 text-end">
+                                            <div class="col-12 text-end d-lg-block d-md-block d-none">
                                                 <span><i class="bi bi-x-circle"></i></span>
                                             </div>
 
@@ -98,7 +118,7 @@
                                                 <div class="col-4 d-grid">
                                                     <button class="btn btn-success btn-sm ">Buy Now</button>
                                                 </div>
-                                                <div class="col-1 d-grid">
+                                                <div class="col-1 d-grid ">
                                                     <button class="btn btn-light btn-sm "><i class="bi bi-heart-fill text-danger"></i></button>
                                                 </div>
                                             </div>
@@ -110,11 +130,53 @@
                     </div>
                     <!-- product Card -->
 
+
+
                 </div>
             </div>
             <!-- End product List Div -->
 
-            <div class="col-2"></div>
+
+            <!-- Start Checkout Div -->
+            <div class="col-lg-3 col-11 mt-2 mb-4">
+                <div class="row justify-content-center">
+
+                    <div class="col-11">
+                        <div class="row justify-content-center">
+
+                            <div class="col-12 py-2 text-center">
+                                <span class="fw-semibold fs-5">Order Summery</span>
+                            </div>
+
+                            <hr class="col-11">
+
+                            <div class="col-12 mt-3">
+                                <span>Products (2)</span>
+                            </div>
+
+                            <div class="col-12 mt-3">
+                                <span> Shipping : Rs.250.00</span>
+                            </div>
+
+                            <div class="col-12 mt-3">
+                                <span>Sub Total : Rs.500.00</span>
+                            </div>
+
+                            <hr class="mt-4 col-11">
+
+                            <div class="col-12 mt-3 mb-3">
+                                <span>Total Cost : Rs.750.00</span>
+                            </div>
+
+                            <div class="col-12 d-grid">
+                                <button class="btn btn-dark btn-sm rounded-1">Checkout</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Checkout Div -->
 
             <?php include "footer.php"; ?>
         </div>
