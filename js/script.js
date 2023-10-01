@@ -94,6 +94,24 @@ function signIn() {
 
     }
 }
+function signout(){
+
+    var r = new XMLHttpRequest();
+
+    r.onreadystatechange = function() {
+        if (r.readyState == 4) {
+            var t = r.responseText;
+            if (t == "Success") {
+                window.location = "index.php";
+            } else {
+                alert(t);
+            }
+        }
+    };
+    r.open("GET", "signoutProcess.php", true);
+    r.send();
+
+}
 
 function forgotPassword() {
 
@@ -304,5 +322,25 @@ function updateProduct(id){
     request.send(form);
 
 
+
+}
+
+function deleteProduct(id){
+
+
+    var r = new XMLHttpRequest();
+
+    r.onreadystatechange = function() {
+        if (r.readyState == 4) {
+            var t = r.responseText;
+            if (t == "Success") {
+                window.location.reload;
+            } else {
+                alert(t);
+            }
+        }
+    };
+    r.open("GET", "deleteProductProcess.php"+id, true);
+    r.send();
 
 }
