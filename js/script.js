@@ -242,7 +242,6 @@ function searchProducts() {
     r.onreadystatechange = function () {
         if (r.readyState == 4 && r.status == 200) {
             var t = r.responseText;
-            alert(t);
             document.getElementById("searchProductBody").innerHTML = t;
         }
     }
@@ -259,15 +258,16 @@ function searchFarmers(){
     var city = document.getElementById("farmerCity");
 
     var f = new FormData();
-    f.append("txt",searchText);
-    f.append("dis",district);
-    f.append("city",city);
+    f.append("txt",searchText.value);
+    f.append("dis",district.value);
+    f.append("city",city.value);
 
     var r = new XMLHttpRequest();
 
     r.onreadystatechange = function () {
         if (r.readyState == 4 && r.status == 200) {
             var t = r.responseText;
+            alert(t);
             document.getElementById("searchFarmerBody").innerHTML = t;
         }
     }

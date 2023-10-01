@@ -30,7 +30,7 @@ if (isset($_SESSION["u"])) {
                                         INNER JOIN `user` ON `user`.`id`=`product`.`user_id` 
                                         INNER JOIN `address` ON `address`.`user_id`=`user`.`id`
                                         INNER JOIN `city` ON `city`.`id` = `address`.`city_id`
-                                        WHERE `cname`='" . $user_city . "' ORDER BY `exp` ASC ");
+                                        WHERE `name` LIKE '".$searchText."%' AND `cname` = '" . $user_city . "' ORDER BY `exp` ASC ");
 
         $product_num1 = $product_rs1->num_rows;
 
@@ -74,7 +74,7 @@ if (isset($_SESSION["u"])) {
 
 if ($loadWithoutCity == "true") {
 
-    $product_rs2 = Database::search("SELECT * FROM `product` ORDER BY `exp` ASC ");
+    $product_rs2 = Database::search("SELECT * FROM `product` WHERE `name` LIKE '".$searchText."%' ORDER BY `exp` ASC ");
     $product_num2 = $product_rs2->num_rows;
 
     for ($j = 0; $j < $product_num2; $j++) {
@@ -106,3 +106,4 @@ if ($loadWithoutCity == "true") {
     <?php
     }
 }
+?>
