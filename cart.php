@@ -24,7 +24,7 @@
             <hr>
 
             <!-- Start Product List Div -->
-            <div class="col-12">
+            <div class="col-8  mt-2">
                 <div class="row justify-content-center">
 
 
@@ -32,21 +32,30 @@
                     <div class="card mb-3" style="max-width: 540px;">
                         <div class="row g-0">
                             <div class="col-md-4">
-                                <img src="resources/redBellpepper.png" class="img-fluid rounded-start" alt="...">
+                                <img src="resources/yellowBellpepper.png" class="img-fluid rounded-start" alt="...">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-12 text-end">
+                                                <span><i class="bi bi-x-circle"></i></span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
                                     <span class="card-title fs-6 fw-semibold">BELL PEPPER - YELLOW (250g)</span><br><br>
                                     <span class="card-title fs-6 text-success fw-semibold">In Stock - 97 Packs Available</span><br>
                                     <span class="card-title fs-6 text-danger fw-semibold">Rs.250.00</span><br>
                                     <div class="row">
                                         <div class="col-12 mt-2">
                                             <div class="row">
+                                                <div class="col-4">
+                                                    <input type="number" class="form-control form-control-sm col-1" value="1">
+                                                </div>
                                                 <div class="col-4 d-grid">
                                                     <button class="btn btn-success btn-sm ">Buy Now</button>
-                                                </div>
-                                                <div class="col-4">
-                                                    <input type="number" class="form-control form-control-sm col-1">
                                                 </div>
                                                 <div class="col-1 d-grid">
                                                     <button class="btn btn-light btn-sm "><i class="bi bi-heart-fill text-danger"></i></button>
@@ -54,9 +63,47 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- product Card -->
 
+                    <!-- product Card -->
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="resources/yellowBellpepper.png" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-12 text-end">
+                                                <span><i class="bi bi-x-circle"></i></span>
+                                            </div>
 
+                                        </div>
+                                    </div>
 
+                                    <span class="card-title fs-6 fw-semibold">BELL PEPPER - YELLOW (250g)</span><br><br>
+                                    <span class="card-title fs-6 text-success fw-semibold">In Stock - 97 Packs Available</span><br>
+                                    <span class="card-title fs-6 text-danger fw-semibold">Rs.250.00</span><br>
+                                    <div class="row">
+                                        <div class="col-12 mt-2">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <input type="number" class="form-control form-control-sm col-1" value="1">
+                                                </div>
+                                                <div class="col-4 d-grid">
+                                                    <button class="btn btn-success btn-sm ">Buy Now</button>
+                                                </div>
+                                                <div class="col-1 d-grid">
+                                                    <button class="btn btn-light btn-sm "><i class="bi bi-heart-fill text-danger"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
