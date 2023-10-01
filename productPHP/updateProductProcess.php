@@ -54,7 +54,7 @@ if (isset($_SESSION["p"])) {
                 }
             }
         }
-        Database::iud("UPDATE `product` SET `qty`='" . $qty . "',`price`='" . $cost . "',`discount`='" . $discount . "',`mfd`='" . $mfd . "',`exp`='" . $exp . "',`status_id`='" . $status . "',`user_id`='" . $uid . "' WHERE `id`='" . $pid . "'");
+        Database::iud("UPDATE `product` SET `qty`='" . $qty . "',`price`='" . $cost . "',`discount`='" . $discount . "',`mfd`='" . $mfd . "',`exp`='" . $exp . "',`user_id`='" . $uid . "' WHERE `id`='" . $pid . "'");
 
         echo ("Product has been successfully updated!");
     } else {

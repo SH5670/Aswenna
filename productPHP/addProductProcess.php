@@ -75,7 +75,7 @@ if ($category == "0") {
                     } else if ($file_extension == "image/jpeg") {
                         $new_img_extension = ".jpeg";
                     } else if ($file_extension == "image/png") {
-                        $new_img_extension = ".pmh";
+                        $new_img_extension = ".png";
                     } else if ($file_extension == "image/svg+xml") {
                         $new_img_extension = ".svg";
                     }

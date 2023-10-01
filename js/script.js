@@ -334,13 +334,104 @@ function deleteProduct(id){
         if (r.readyState == 4) {
             var t = r.responseText;
             if (t == "Success") {
-                window.location.reload;
+                window.location.reload();
             } else {
                 alert(t);
             }
         }
     };
-    r.open("GET", "deleteProductProcess.php"+id, true);
+    r.open("GET", "deleteProductProcess.php?id="+id, true);
+    r.send();
+
+}
+
+function changeProductStatus(id) {
+    var pid = id;
+
+    var r = new XMLHttpRequest();
+
+    r.onreadystatechange = function() {
+        if (r.readyState == 4) {
+            var t = r.responseText;
+            if (t == "deactivated") {
+                alert("Product Deactivated");
+                window.location.reload();
+            } else if (t == "activated") {
+                alert("Product Activated");
+                window.location.reload();
+            } else {
+                alert(t);
+            }
+        }
+    };
+
+    r.open("GET", "changeProductStatusProcess.php?pid=" + pid, true);
+    r.send();
+}
+
+//cart
+
+function addToCart(id){
+
+    var r = new XMLHttpRequest();
+
+    r.onreadystatechange = function() {
+        if (r.readyState == 4) {
+            var t = r.responseText;
+            alert(t);
+        }
+    };
+
+    r.open("GET", "addToCartProcess.php?id=" + id, true);
+    r.send();
+
+}
+
+function removeFromCart(id){
+
+    var r = new XMLHttpRequest();
+
+    r.onreadystatechange = function() {
+        if (r.readyState == 4) {
+            var t = r.responseText;
+            alert(t);
+        }
+    };
+
+    r.open("GET", "removeFromCartProcess.php?id=" + id, true);
+    r.send();
+
+}
+
+//wishlist
+
+function addToWishlist(id){
+
+    var r = new XMLHttpRequest();
+
+    r.onreadystatechange = function() {
+        if (r.readyState == 4) {
+            var t = r.responseText;
+            alert(t);
+        }
+    };
+
+    r.open("GET", "addToWishlistProcess.php?id=" + id, true);
+    r.send();
+
+}
+function removeFromWishlist(id){
+
+    var r = new XMLHttpRequest();
+
+    r.onreadystatechange = function() {
+        if (r.readyState == 4) {
+            var t = r.responseText;
+            alert(t);
+        }
+    };
+
+    r.open("GET", "removeFromWishlistProcess.php?id=" + id, true);
     r.send();
 
 }
