@@ -20,13 +20,13 @@
             <!-- Start Search Bar -->
             <div class="col-12 my-2">
                 <div class="row justify-content-end">
-                    <div class="col-5">
+                    <div class="col-lg-5 col-5">
                         <input type="text" class="form-control form-control-sm" placeholder="Search Products" id="searchText">
                     </div>
-                    <div class="col-1 d-grid">
+                    <div class="col-lg-1 col-2 d-grid">
                         <button class="btn btn-sm fw-semibold" style="background-color: #f0df0d;" onclick="searchProducts();">Search</button>
                     </div>
-                    <div class="col-2 d-grid">
+                    <div class="col-lg-2 col-5 d-grid">
                         <a href="searchFarmers.php" class="btn fw-semibold btn-sm" style="background-color: #c0c0c0;">Search Farmers</a>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
                             <div class="col-12 mb-3">
                                 <div class="row justify-content-center gap-3">
 
-                                    <div class="card col-2">
+                                    <div class="card col-lg-2 col-md-4 col-5">
                                         <img src="resources/yellowBellpepper.png" style="" class="card-img-top" alt="...">
 
                                         <div class="col-12 text-center" style="height: 50px;">
@@ -93,7 +93,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="card col-2">
+                                    <div class="card col-lg-2 col-md-4 col-5">
                                         <img src="resources/broccali.png" style="" class="card-img-top" alt="...">
 
                                         <div class="col-12 text-center" style="height: 50px;">
@@ -112,7 +112,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="card col-2">
+                                    <div class="card col-lg-2 col-md-4 col-5">
                                         <img src="resources/redBellpepper.png" style="" class="card-img-top" alt="...">
 
                                         <div class="col-12 text-center" style="height: 50px;">
@@ -131,7 +131,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="card col-2">
+                                    <div class="card col-lg-2 col-md-4 col-5">
                                         <img src="resources/corn.png" style="" class="card-img-top" alt="...">
 
                                         <div class="col-12 text-center" style="height: 50px;">
@@ -150,7 +150,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="card col-2">
+                                    <div class="card col-lg-2 col-md-4 col-5">
                                         <img src="resources/purplecabbage.png" style="" class="card-img-top" alt="...">
 
                                         <div class="col-12 text-center" style="height: 50px;">

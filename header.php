@@ -28,7 +28,7 @@
                     <div class="col-1 py-2 text-center">
                         <span class="curser" onclick="showLoginModel();">Register</span>
                     </div>
-                    <div class="col-1 py-2 text-center fs-5"><i class="bi bi-cart-plus"></i></div>
+                    <div class="col-1 py-2 text-center fs-5"><a href="cart.php" class="text-decoration-none text-white"><i class="bi bi-cart-plus"></i></a></div>
                 </div>
                 <!-- End Header Div -->
 

@@ -161,8 +161,6 @@
             </div>
             <!-- End Farmers List -->
 
-
-
             <?php include "footer.php"; ?>
         </div>
 
