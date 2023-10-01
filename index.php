@@ -25,7 +25,7 @@
                         <button class="btn btn-sm fw-semibold" style="background-color: #f0df0d;" onclick="searchProducts();">Search</button>
                     </div>
                     <div class="col-2 d-grid">
-                        <button class="btn fw-semibold btn-sm" style="background-color: #c0c0c0;">Search Farmers</button>
+                        <a href="searchFarmers.php" class="btn fw-semibold btn-sm" style="background-color: #c0c0c0;">Search Farmers</a>
                     </div>
                 </div>
             </div>

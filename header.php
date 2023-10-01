@@ -21,7 +21,7 @@
                     <div class="col-6 py-2">
                         <img src="resources/logo.png" style="width: 50px;" alt="">
                     </div>
-                    <div class="col-1 py-2 text-center">Home</div>
+                    <div class="col-1 py-2 text-center"><a href="index.php" class="text-decoration-none text-white">Home</a></div>
                     <div class="col-1 py-2 text-center">About</div>
                     <div class="col-1 py-2 text-center">Store</div>
                     <div class="col-1 py-2 text-center">
