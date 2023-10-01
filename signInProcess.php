@@ -25,7 +25,7 @@ if (empty($email)) {
         echo ("Success");
         
         $d = $rs->fetch_assoc();
-        $_SESSION["c"] = $d;
+        $_SESSION["u"] = $d;
 
         if ($rememberme == "true") {
 

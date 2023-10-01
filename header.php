@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <title>Document</title>
 </head>
@@ -14,9 +15,10 @@
         <div class="row">
             <div class="col-12">
 
-                <div class="row  fw-semibold bg-info align-items-center">
-                    <!-- style="background-color: #27AE60;" -->
-                    <div class="col-5 py-2">
+                <!-- Start Header Div -->
+                <div class="row  fw-semibold align-items-center text-white" style="background-color: #008000;">
+
+                    <div class="col-6 py-2">
                         <img src="resources/logo.png" style="width: 50px;" alt="">
                     </div>
                     <div class="col-1 py-2 text-center">Home</div>
@@ -25,8 +27,9 @@
                     <div class="col-1 py-2 text-center">
                         <span class="curser" onclick="showLoginModel();">Register</span>
                     </div>
-                    <div class="col-1 py-2 text-center ">Cart</div>
+                    <div class="col-1 py-2 text-center fs-5"><i class="bi bi-cart-plus"></i></div>
                 </div>
+                <!-- End Header Div -->
 
                 <!--Start SignUp Modal -->
                 <div class="modal" tabindex="-1" id="signUpModel">
@@ -85,7 +88,7 @@
 
                                         <div class="col-12 mt-3">
                                             <span class="">Already Have An Account ?</span>
-                                            <a  class="curser" onclick="showLoginModel();">Back to Login</a>
+                                            <a class="curser" onclick="showLoginModel();">Back to Login</a>
                                         </div>
 
 
@@ -100,7 +103,6 @@
                     </div>
                 </div>
                 <!-- End SignUp modal -->
-
 
                 <!--Start SignIn Modal -->
                 <div class="modal" tabindex="-1" id="signInModel">
