@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <title>Aswenna | Home</title>
+    <link rel="icon" href="resources/icon/icon.png">
+
 </head>
 
 <body>
@@ -215,8 +217,8 @@
         </div>
 
     </div>
-    <script src="bootstrap.bundle.js"></script>
-    <script src="script.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
