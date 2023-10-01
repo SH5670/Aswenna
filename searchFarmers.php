@@ -24,17 +24,18 @@
                     <!-- Start search farmers input -->
                     <div class="col-4">
                         <label for="" class="mb-1">By Name</label>
-                        <input type="text" class="form-control form-control-sm" placeholder="Enter Name">
+                        <input type="text" class="form-control form-control-sm" placeholder="Enter Name" id="searchFarmerText">
                     </div>
                     <!-- End search farmers input -->
 
                     <!-- start District Dropdown -->
                     <div class="col-2">
                         <label for="" class="mb-1">By District</label>
-                        <select name="" id="" class="form-select form-select-sm">
+                        <select name="" id="" class="form-select form-select-sm" id="farmerDistrict">
                             <option value="0">Select</option>
                             <option value="1">Colombo</option>
                             <option value="2">Gampaha</option>
+                            <option value="3">Kaluthara</option>
                         </select>
                     </div>
                     <!-- End District Dropdown -->
@@ -43,10 +44,11 @@
                     <!-- Start City Dropdown -->
                     <div class="col-2">
                         <label for="" class="mb-1">By City</label>
-                        <select name="" id="" class="form-select form-select-sm">
+                        <select name="" id="farmerCity" class="form-select form-select-sm" >
                             <option value="0">Select</option>
-                            <option value="1">Colombo</option>
-                            <option value="2">Gampaha</option>
+                            <option value="1">Nugegoda</option>
+                            <option value="2">Dehiwala</option>
+                            <option value="3">Kaluthara</option>
                         </select>
                     </div>
                     <!-- End City Dropdown -->
@@ -59,9 +61,9 @@
 
             <!-- Start farmers List -->
             <div class="col-12 mb-2">
-                <div class=" row justify-content-center gap-3">
+                <div class=" row justify-content-center gap-3" id="searchFarmerBody">
 
-                    <div class="card col-2">
+                    <!-- <div class="card col-2">
                         <img src="resources/user.jpg" style="" class="card-img-top" alt="...">
 
                         <div class="col-12 text-center" style="height: 50px;">
@@ -154,7 +156,7 @@
                             </div>
 
                         </div>
-                    </div>
+                    </div> -->
 
 
                 </div>
