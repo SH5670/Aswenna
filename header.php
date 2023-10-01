@@ -17,18 +17,19 @@
             <div class="col-12">
 
                 <!-- Start Header Div -->
-                <div class="row  fw-semibold align-items-center text-white" style="background-color: #008000;">
+                <div class="row  fw-semibold align-items-center text-white justify-content-center" style="background-color: #008000;">
 
-                    <div class="col-6 py-2">
+                    <div class="col-lg-6 col-md-6 col-12 py-2 text-lg-start text-md-start text-center">
                         <img src="resources/logo.png" style="width: 50px;" alt="">
                     </div>
-                    <div class="col-1 py-2 text-center"><a href="index.php" class="text-decoration-none text-white">Home</a></div>
-                    <div class="col-1 py-2 text-center">About</div>
-                    <div class="col-1 py-2 text-center">Store</div>
-                    <div class="col-1 py-2 text-center">
+                    <div class="col-lg-1 col-2 py-2 text-center"><a href="index.php" class="text-decoration-none text-white">Home</a></div>
+                    <div class="col-lg-1 col-2 py-2 text-center">About</div>
+                    <div class="col-lg-1 col-2 py-2 text-center">Store</div>
+                    <div class="col-lg-1 col-3 py-2 text-center">
                         <span class="curser" onclick="showLoginModel();">Register</span>
                     </div>
-                    <div class="col-1 py-2 text-center fs-5"><a href="cart.php" class="text-decoration-none text-white"><i class="bi bi-cart-plus"></i></a></div>
+                    <div class="col-lg-1 col-3 py-2 text-center fs-5"><a href="cart.php" class="text-decoration-none text-white"><i class="bi bi-cart-plus"></i></a></div>
+                    <div class="col-lg-1 d-lg-block d-md-block d-none"></div>
                 </div>
                 <!-- End Header Div -->
 
