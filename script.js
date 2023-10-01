@@ -174,8 +174,13 @@ function addProduct() {
     var title = document.getElementById("title").value;
     var qty = document.getElementById("qty").value;
     var cost = document.getElementById("cost").value;
+    var discount = document.getElementById("discount").value;
+    var mfd = document.getElementById("mfd").value;
+    var exp = document.getElementById("exp").value;
     var desc = document.getElementById("description").value;
     var image = document.getElementById("imageuploader");
+    // var status = document.getElementById("status").value;
+
 
     var form = new FormData();
 
@@ -183,6 +188,9 @@ function addProduct() {
     form.append("title", title);
     form.append("qty", qty);
     form.append("cost", cost);
+    form.append("discount", discount);
+    form.append("mfd", mfd);
+    form.append("exp", exp);
     form.append("desc", desc);
 
 
@@ -204,8 +212,55 @@ function addProduct() {
 
     }
 
-    request.open("POST","addProductProcess.php",true);
-    request.send(form); 
+    request.open("POST", "addProductProcess.php", true);
+    request.send(form);
+
+
+}
+
+function updateProduct(id){
+
+    var qty = document.getElementById("qty").value;
+    var cost = document.getElementById("cost").value;
+    var discount = document.getElementById("discount").value;
+    var mfd = document.getElementById("mfd").value;
+    var exp = document.getElementById("exp").value;
+    var image = document.getElementById("imageuploader");
+    var status = document.getElementById("status").value;
+
+
+    var form = new FormData();
+
+    form.append("qty", qty);
+    form.append("cost", cost);
+    form.append("discount", discount);
+    form.append("mfd", mfd);
+    form.append("exp", exp);
+    form.append("status", status);
+
+
+
+    var file_count = image.files.length;
+
+    for (var x = 0; x < file_count; x++) {
+        form.append("image" + x, image.files[x]);
+    }
+
+    var request = XMLHttpRequest();
+
+    request.onreadystatechange = function () {
+
+        if (r.readyState == 4) {
+            var t = request.responseText;
+            alert(t);
+
+        }
+
+    }
+
+    request.open("POST", "updateProductProcess.php", true);
+    request.send(form);
+
 
 
 }
