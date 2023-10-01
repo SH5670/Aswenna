@@ -24,8 +24,8 @@
             <hr>
 
             <!-- Start Product List Div -->
-            <div class="col-8  mt-2">
-                <div class="row justify-content-center">
+            <div class="col-10 mt-2">
+                <div class="row gap-2 justify-content-center">
 
 
                     <!-- product Card -->
@@ -73,7 +73,7 @@
                     <div class="card mb-3" style="max-width: 540px;">
                         <div class="row g-0">
                             <div class="col-md-4">
-                                <img src="resources/yellowBellpepper.png" class="img-fluid rounded-start" alt="...">
+                                <img src="resources/broccali.png" class="img-fluid rounded-start" alt="...">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
@@ -113,6 +113,8 @@
                 </div>
             </div>
             <!-- End product List Div -->
+
+            <div class="col-2"></div>
 
             <?php include "footer.php"; ?>
         </div>
