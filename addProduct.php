@@ -24,10 +24,12 @@
                         <span class="fs-5 fw-semibold">Add Product</span>
                     </div>
 
-                    <div class="col-11 mb-5">
+                    <hr>
+
+                    <div class="col-11 mb-5 mt-2">
                         <div class="row gap-2 justify-content-center align-items-center">
 
-                            <div class="col-5">
+                            <div class="col-lg-5 col-md-5 col-12">
                                 <div class="row g-3">
 
                                     <div class="col-12">
@@ -68,7 +70,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-5 text-center">
+                            <div class="col-lg-5 col-md-5 col-12 text-center">
                                 <div class="row align-items-center justify-content-center">
 
                                     <div class="col-12 text-center mb-3"><span class=" fw-semibold fs-5">Add Product Image</span></div>
