@@ -94,11 +94,11 @@ function signIn() {
 
     }
 }
-function signout(){
+function signout() {
 
     var r = new XMLHttpRequest();
 
-    r.onreadystatechange = function() {
+    r.onreadystatechange = function () {
         if (r.readyState == 4) {
             var t = r.responseText;
             if (t == "Success") {
@@ -251,34 +251,33 @@ function searchProducts() {
 
 }
 
-function searchFarmers(){
+function searchFarmers() {
 
     var searchText = document.getElementById("searchFarmerText");
     var district = document.getElementById("farmerDistrict");
     var city = document.getElementById("farmerCity");
 
     var f = new FormData();
-    f.append("txt",searchText.value);
-    f.append("dis",district.value);
-    f.append("city",city.value);
+    f.append("txt", searchText.value);
+    f.append("dis", district.value);
+    f.append("city", city.value);
 
     var r = new XMLHttpRequest();
 
     r.onreadystatechange = function () {
         if (r.readyState == 4 && r.status == 200) {
             var t = r.responseText;
-            alert(t);
             document.getElementById("searchFarmerBody").innerHTML = t;
         }
     }
 
+
     r.open("POST", "searchFarmersProcess.php", true);
     r.send(f);
 
-
 }
 
-function updateProduct(id){
+function updateProduct(id) {
 
     var qty = document.getElementById("qty").value;
     var cost = document.getElementById("cost").value;
@@ -325,12 +324,12 @@ function updateProduct(id){
 
 }
 
-function deleteProduct(id){
+function deleteProduct(id) {
 
 
     var r = new XMLHttpRequest();
 
-    r.onreadystatechange = function() {
+    r.onreadystatechange = function () {
         if (r.readyState == 4) {
             var t = r.responseText;
             if (t == "Success") {
@@ -340,7 +339,7 @@ function deleteProduct(id){
             }
         }
     };
-    r.open("GET", "deleteProductProcess.php?id="+id, true);
+    r.open("GET", "deleteProductProcess.php?id=" + id, true);
     r.send();
 
 }
@@ -350,7 +349,7 @@ function changeProductStatus(id) {
 
     var r = new XMLHttpRequest();
 
-    r.onreadystatechange = function() {
+    r.onreadystatechange = function () {
         if (r.readyState == 4) {
             var t = r.responseText;
             if (t == "deactivated") {
@@ -371,11 +370,11 @@ function changeProductStatus(id) {
 
 //cart
 
-function addToCart(id){
+function addToCart(id) {
 
     var r = new XMLHttpRequest();
 
-    r.onreadystatechange = function() {
+    r.onreadystatechange = function () {
         if (r.readyState == 4) {
             var t = r.responseText;
             alert(t);
@@ -387,11 +386,11 @@ function addToCart(id){
 
 }
 
-function removeFromCart(id){
+function removeFromCart(id) {
 
     var r = new XMLHttpRequest();
 
-    r.onreadystatechange = function() {
+    r.onreadystatechange = function () {
         if (r.readyState == 4) {
             var t = r.responseText;
             alert(t);
@@ -405,11 +404,11 @@ function removeFromCart(id){
 
 //wishlist
 
-function addToWishlist(id){
+function addToWishlist(id) {
 
     var r = new XMLHttpRequest();
 
-    r.onreadystatechange = function() {
+    r.onreadystatechange = function () {
         if (r.readyState == 4) {
             var t = r.responseText;
             alert(t);
@@ -420,11 +419,11 @@ function addToWishlist(id){
     r.send();
 
 }
-function removeFromWishlist(id){
+function removeFromWishlist(id) {
 
     var r = new XMLHttpRequest();
 
-    r.onreadystatechange = function() {
+    r.onreadystatechange = function () {
         if (r.readyState == 4) {
             var t = r.responseText;
             alert(t);
@@ -433,5 +432,54 @@ function removeFromWishlist(id){
 
     r.open("GET", "removeFromWishlistProcess.php?id=" + id, true);
     r.send();
+
+}
+
+function loadCityFromDistrict() {
+
+    var district = document.getElementById("farmerDistrict");
+
+    var f = new FormData();
+    f.append("district", district.value);
+
+    var r = new XMLHttpRequest();
+
+    r.onreadystatechange = function () {
+        if (r.readyState == 4 && r.status == 200) {
+            var t = r.responseText;
+            document.getElementById("farmerCity").innerHTML = t;
+            document.getElementById("farmerCity").value = "0";
+        }
+    }
+
+    r.open("POST", "loadCityFromDistrictProcess.php", true);
+    r.send(f);
+
+}
+function loadDistrictFromCity() {
+
+    var city = document.getElementById("farmerCity");
+
+    var f = new FormData();
+    f.append("city", city.value);
+
+    var r = new XMLHttpRequest();
+
+    r.onreadystatechange = function () {
+        if (r.readyState == 4 && r.status == 200) {
+            var t = r.responseText;
+
+            if (t != "reloadAllDistricts") {
+                document.getElementById('farmerDistrict').value = t;
+            }else{
+                document.getElementById('farmerDistrict').value = 0;
+            }
+
+
+        }
+    }
+
+    r.open("POST", "loadDistrictFromCityProcess.php", true);
+    r.send(f);
 
 }

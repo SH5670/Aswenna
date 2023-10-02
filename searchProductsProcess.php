@@ -30,7 +30,7 @@ if (isset($_SESSION["u"])) {
                                         INNER JOIN `user` ON `user`.`id`=`product`.`user_id` 
                                         INNER JOIN `address` ON `address`.`user_id`=`user`.`id`
                                         INNER JOIN `city` ON `city`.`id` = `address`.`city_id`
-                                        WHERE `name` LIKE '".$searchText."%' AND `cname` = '" . $user_city . "' ORDER BY `exp` ASC ");
+                                        WHERE (`name` LIKE '".$searchText."%' AND `cname` = '" . $user_city . "') AND `product`.`status_id`='1' ORDER BY `exp` ASC ");
 
         $product_num1 = $product_rs1->num_rows;
 
