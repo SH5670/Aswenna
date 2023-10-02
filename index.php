@@ -85,6 +85,9 @@
                                             <span class="fw-semibold">Rs.300.00</span><br>
                                             <span class=" text-success">4 Items Available</span>
                                             <div class="row">
+                                                <div class="col-12 d-grid mt-1">
+                                                    <button class="btn btn-sm text-dark fw-semibold" style="background-color: #f0df0d;">Buy Now</button>
+                                                </div>
                                                 <div class="col-12 d-grid mb-3 mt-1">
                                                     <button class="btn btn-sm text-white" style="background-color: #008000;">Add To Cart &nbsp; <i class="bi bi-cart-plus fs-6"></i></button>
                                                 </div>
@@ -104,6 +107,9 @@
                                             <span class="fw-semibold">Rs.190.00</span><br>
                                             <span class=" text-success">4 Items Available</span>
                                             <div class="row">
+                                                <div class="col-12 d-grid mt-1">
+                                                    <button class="btn btn-sm text-dark fw-semibold" style="background-color: #f0df0d;">Buy Now</button>
+                                                </div>
                                                 <div class="col-12 d-grid mb-3 mt-1">
                                                     <button class="btn btn-sm text-white" style="background-color: #008000;">Add To Cart &nbsp; <i class="bi bi-cart-plus fs-6"></i></button>
                                                 </div>
@@ -123,6 +129,9 @@
                                             <span class="fw-semibold">Rs.290.00</span><br>
                                             <span class=" text-success">10 Items Available</span>
                                             <div class="row">
+                                            <div class="col-12 d-grid mt-1">
+                                                    <button class="btn btn-sm text-dark fw-semibold" style="background-color: #f0df0d;">Buy Now</button>
+                                                </div>
                                                 <div class="col-12 d-grid mb-3 mt-1">
                                                     <button class="btn btn-sm text-white" style="background-color: #008000;">Add To Cart &nbsp; <i class="bi bi-cart-plus fs-6"></i></button>
                                                 </div>
@@ -142,6 +151,9 @@
                                             <span class="fw-semibold">Rs.55.00</span><br>
                                             <span class=" text-success">4 Items Available</span>
                                             <div class="row">
+                                            <div class="col-12 d-grid mt-1">
+                                                    <button class="btn btn-sm text-dark fw-semibold" style="background-color: #f0df0d;">Buy Now</button>
+                                                </div>
                                                 <div class="col-12 d-grid mb-3 mt-1">
                                                     <button class="btn btn-sm text-white" style="background-color: #008000;">Add To Cart &nbsp; <i class="bi bi-cart-plus fs-6"></i></button>
                                                 </div>
@@ -161,6 +173,9 @@
                                             <span class="fw-semibold">Rs.230.00</span><br>
                                             <span class=" text-success">4 Items Available</span>
                                             <div class="row">
+                                            <div class="col-12 d-grid mt-1">
+                                                    <button class="btn btn-sm text-dark fw-semibold" style="background-color: #f0df0d;">Buy Now</button>
+                                                </div>
                                                 <div class="col-12 d-grid mb-3 mt-1">
                                                     <button class="btn btn-sm text-white" style="background-color: #008000;">Add To Cart &nbsp; <i class="bi bi-cart-plus fs-6"></i></button>
                                                 </div>
