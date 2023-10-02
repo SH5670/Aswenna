@@ -1,3 +1,9 @@
+<?php
+
+require "connection.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +15,7 @@
     <title>Aswenna | Home</title>
 </head>
 
-<body>
+<body onload="searchFarmers();">
     <div class="container-fluid justify-content-center vh-100">
 
         <div class="row ">
@@ -20,22 +26,34 @@
             </div>
 
             <div class="col-12 mt-2 ">
-                <div class="row align-items-center py-2 ">               
+                <div class="row align-items-center py-2 ">
                     <!-- Start search farmers input -->
                     <div class="col-4">
                         <label for="" class="mb-1">By Name</label>
-                        <input type="text" class="form-control form-control-sm" placeholder="Enter Name" id="searchFarmerText">
+                        <input type="text" class="form-control form-control-sm" placeholder="Enter Name" id="searchFarmerText" onkeypress="searchFarmers();">
                     </div>
                     <!-- End search farmers input -->
 
                     <!-- start District Dropdown -->
                     <div class="col-2">
                         <label for="" class="mb-1">By District</label>
-                        <select name="" id="" class="form-select form-select-sm" id="farmerDistrict">
+                        <select name="" class="form-select form-select-sm" id="farmerDistrict" onchange="loadCityFromDistrict(); searchFarmers();">
                             <option value="0">Select</option>
-                            <option value="1">Colombo</option>
-                            <option value="2">Gampaha</option>
-                            <option value="3">Kaluthara</option>
+                            <?php
+
+                            $district_rs = Database::search("SELECT * FROM `district`");
+                            $district_num = $district_rs->num_rows;
+
+                            for ($i = 0; $i < $district_num; $i++) {
+
+                                $district_data = $district_rs->fetch_assoc();
+                            ?>
+                                <option value="<?php echo $district_data["id"]; ?>"><?php echo $district_data["dname"] ?></option>
+                            <?php
+
+                            }
+
+                            ?>
                         </select>
                     </div>
                     <!-- End District Dropdown -->
@@ -44,15 +62,26 @@
                     <!-- Start City Dropdown -->
                     <div class="col-2">
                         <label for="" class="mb-1">By City</label>
-                        <select name="" id="farmerCity" class="form-select form-select-sm" >
+                        <select name="" id="farmerCity" class="form-select form-select-sm" onchange="loadDistrictFromCity(); searchFarmers();">
                             <option value="0">Select</option>
-                            <option value="1">Nugegoda</option>
-                            <option value="2">Dehiwala</option>
-                            <option value="3">Kaluthara</option>
+                            <?php
+
+                            $city_rs = Database::search("SELECT * FROM `city`");
+                            $city_num = $city_rs->num_rows;
+
+                            for ($i = 0; $i < $city_num; $i++) {
+
+                                $city_data = $city_rs->fetch_assoc();
+                            ?>
+                                <option value="<?php echo $city_data["id"]; ?>"><?php echo $city_data["cname"] ?></option>
+                            <?php
+
+                            }
+                            ?>
                         </select>
                     </div>
                     <!-- End City Dropdown -->
-                    
+
 
                 </div>
             </div>

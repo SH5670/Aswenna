@@ -6,35 +6,37 @@ $searchText = $_POST["txt"];
 $district = $_POST["dis"];
 $city = $_POST["city"];
 
-$text = "";
-
 $query = "SELECT * FROM `user`
           INNER JOIN `usertype` ON `usertype`.`id`=`user`.`userType_id`
           INNER JOIN `address` ON `address`.`user_id`=`user`.`id`
           INNER JOIN `city` ON `city`.`id` = `address`.`city_id`
           INNER JOIN `district` ON `district`.`id`=`city`.`district_id`
-          WHERE '" . $text . "' `type`='Farmer' ";
+          WHERE ";
 
-if (isset($searchText)) {
+if (!empty($searchText)) {
 
-    $text = "(`fname` LIKE '" . $searchText . "%' OR `lname` LIKE '" . $searchText . "%') AND ";
+    $query .= " (`fname` LIKE '" . $searchText . "%' OR `lname` LIKE '" . $searchText . "%') AND ";
 }
 
-if ($district != "Select" && $city == "Select") {
+if ($district == "0" && $city == "0") {
 
-    $query .= " AND `dname`='" . $district . "'";
+    $query .= " `type`='Farmer' AND ";
 }
 
-if ($city != "Select" && $district == "Select") {
+if ($district != "0" && $city == "0") {
 
-    $query .= " AND `cname`='" . $city . "'";
+    $query .= " `type`='Farmer' AND `district`.`id` = '" . $district . "'";
 }
 
-if ($district != "Select" && $city != "Select") {
+if ($city != "0" && $district == "0") {
 
-    $query .= " AND `dname` ='" . $district . "' AND `cname`='" . $city . "'";
+    $query .= " `type`='Farmer' AND `city`.`id`='" . $city . "'";
 }
 
+if ($district != "0" && $city != "0") {
+
+    $query .= " `type`='Farmer' AND (`district`.`id` ='" . $district . "' AND `city`.`id` ='" . $city . "') ";
+}
 
 $farmers_rs = Database::search($query);
 $farmers_num = $farmers_rs->num_rows;
@@ -50,12 +52,12 @@ if ($farmers_num != 0) {
             <img src="resources/user.jpg" style="" class="card-img-top" alt="...">
 
             <div class="col-12 text-center" style="height: 50px;">
-                <span class="card-title fs-6"><?php echo $farmers_data["fname"]." ". $farmers_data["lname"]?></span><br>
+                <span class="card-title fs-6"><?php echo $farmers_data["fname"] . " " . $farmers_data["lname"] ?></span><br>
             </div>
 
             <div class="col-12 text-center">
-                <span class="fw-semibold"><?php echo $farmers_data["dname"]?></span><br>
-                <span class=" text-success"><?php echo $farmers_data["cname"]?></span>
+                <span class="fw-semibold"><?php echo $farmers_data["dname"] ?></span><br>
+                <span class=" text-success"><?php echo $farmers_data["cname"] ?></span>
                 <div class="row">
                     <div class="col-12 d-grid mb-3 mt-1">
                         <button class="btn btn-sm text-dark fw-semibold" style="background-color: #e7dc18;">View Products</button>
@@ -71,6 +73,5 @@ if ($farmers_num != 0) {
 } else {
 
     //no farmers
-    echo("0 farmers found!");
-
+    echo ("0 farmers found!");
 }
