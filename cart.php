@@ -27,7 +27,6 @@
             <div class="col-lg-9 col-11 mt-2">
                 <div class="row gap-2 justify-content-center">
 
-
                     <!-- product Card -->
                     <div class="card mb-3" style="max-width: 480px;">
                         <div class="row g-0">

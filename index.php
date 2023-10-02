@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/owl.css">
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <title>Aswenna | Home</title>
     <link rel="icon" href="resources/icon/icon.png">
@@ -63,6 +66,7 @@
                     <!-- End Carousel -->
 
 
+                    
                     <!-- Start Seasonal Product Div -->
                     <div class=" col-12 ">
                         <div class="row">
@@ -73,128 +77,161 @@
                             <div class="col-12 mb-3">
                                 <div class="row justify-content-center gap-3">
 
-                                    <div class="card col-lg-2 col-md-4 col-5">
-                                        <img src="resources/yellowBellpepper.png" style="" class="card-img-top" alt="...">
+                                    <div class="owl-carousel owl-theme" oncontextmenu="return false;">
 
-                                        <div class="col-12 text-center" style="height: 50px;">
-                                            <span class="card-title fs-6">BELL PEPPER - YELLOW (250g)</span>
-                                        </div>
+                                    <!-- Seasonal Products -->
+                                        <div class="item m-3">
+                                            <div class="row justify-content-center">
 
-                                        <div class="col-12 text-center">
+                                                <div class="card owlCard">
 
-                                            <span class="fw-semibold">Rs.300.00</span><br>
-                                            <span class=" text-success">4 Items Available</span>
-                                            <div class="row">
-                                                <div class="col-12 d-grid mt-1">
-                                                    <a href="singleProductView.php" class="btn btn-sm text-dark fw-semibold" style="background-color: #f0df0d;">Buy Now</a>
-                                                </div>
-                                                <div class="col-12 d-grid mb-3 mt-1">
-                                                    <button class="btn btn-sm text-white" style="background-color: #008000;">Add To Cart &nbsp; <i class="bi bi-cart-plus fs-6"></i></button>
-                                                </div>
-                                            </div>
+                                                    <img src="resources/yellowBellpepper.png" class="card-img-top" alt="">
 
-                                        </div>
-                                    </div>
+                                                    <div class="col-12 text-center" style="height: 50px;">
+                                                        <span class="card-title fs-6">BELL PEPPER - YELLOW (250g)</span>
+                                                    </div>
 
-                                    <div class="card col-lg-2 col-md-4 col-5">
-                                        <img src="resources/broccali.png" style="" class="card-img-top" alt="...">
+                                                    <div class="col-12 text-center">
 
-                                        <div class="col-12 text-center" style="height: 50px;">
-                                            <span class="card-title fs-6">BROCCOLI - (100g)</span><br>
-                                        </div>
+                                                        <span class="fw-semibold">Rs.300.00</span><br>
+                                                        <span class=" text-success">4 Items Available</span>
+                                                        <div class="row">
+                                                            <div class="col-12 d-grid mt-1">
+                                                                <a href="singleProductView.php" class="btn btn-sm text-dark fw-semibold" style="background-color: #f0df0d;">Buy Now</a>
+                                                            </div>
+                                                            <div class="col-12 d-grid mb-3 mt-1">
+                                                                <a class="btn btn-sm text-white" style="background-color: #008000;">Add To Cart &nbsp; <i class="bi bi-cart-plus fs-6"></i></a>
+                                                            </div>
+                                                        </div>
 
-                                        <div class="col-12 text-center">
-                                            <span class="fw-semibold">Rs.190.00</span><br>
-                                            <span class=" text-success">4 Items Available</span>
-                                            <div class="row">
-                                                <div class="col-12 d-grid mt-1">
-                                                <a href="singleProductView.php" class="btn btn-sm text-dark fw-semibold" style="background-color: #f0df0d;">Buy Now</a>
-                                                </div>
-                                                <div class="col-12 d-grid mb-3 mt-1">
-                                                    <button class="btn btn-sm text-white" style="background-color: #008000;">Add To Cart &nbsp; <i class="bi bi-cart-plus fs-6"></i></button>
+                                                    </div>
                                                 </div>
                                             </div>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="card col-lg-2 col-md-4 col-5">
-                                        <img src="resources/redBellpepper.png" style="" class="card-img-top" alt="...">
-
-                                        <div class="col-12 text-center" style="height: 50px;">
-                                            <span class="card-title fs-6">BELL PEPPER - RED (250g)</span><br>
                                         </div>
 
-                                        <div class="col-12 text-center">
-                                            <span class="fw-semibold">Rs.290.00</span><br>
-                                            <span class=" text-success">10 Items Available</span>
-                                            <div class="row">
-                                            <div class="col-12 d-grid mt-1">
-                                            <a href="singleProductView.php" class="btn btn-sm text-dark fw-semibold" style="background-color: #f0df0d;">Buy Now</a>
-                                                </div>
-                                                <div class="col-12 d-grid mb-3 mt-1">
-                                                    <button class="btn btn-sm text-white" style="background-color: #008000;">Add To Cart &nbsp; <i class="bi bi-cart-plus fs-6"></i></button>
-                                                </div>
-                                            </div>
+                                        <div class="item m-3">
+                                            <div class="row justify-content-center">
 
-                                        </div>
-                                    </div>
+                                                <div class="card owlCard">
 
-                                    <div class="card col-lg-2 col-md-4 col-5">
-                                        <img src="resources/corn.png" style="" class="card-img-top" alt="...">
+                                                    <img src="resources/corn.png" class="card-img-top" alt="">
 
-                                        <div class="col-12 text-center" style="height: 50px;">
-                                            <span class="card-title fs-6">CORN - 1</span><br>
-                                        </div>
+                                                    <div class="col-12 text-center" style="height: 50px;">
+                                                        <span class="card-title fs-6">CORN - 1</span><br>
+                                                    </div>
 
-                                        <div class="col-12 text-center">
-                                            <span class="fw-semibold">Rs.55.00</span><br>
-                                            <span class=" text-success">4 Items Available</span>
-                                            <div class="row">
-                                            <div class="col-12 d-grid mt-1">
-                                            <a href="singleProductView.php" class="btn btn-sm text-dark fw-semibold" style="background-color: #f0df0d;">Buy Now</a>
-                                                </div>
-                                                <div class="col-12 d-grid mb-3 mt-1">
-                                                    <button class="btn btn-sm text-white" style="background-color: #008000;">Add To Cart &nbsp; <i class="bi bi-cart-plus fs-6"></i></button>
+                                                    <div class="col-12 text-center">
+                                                        <span class="fw-semibold">Rs.55.00</span><br>
+                                                        <span class=" text-success">25 Items Available</span>
+                                                        <div class="row">
+                                                            <div class="col-12 d-grid mt-1">
+                                                                <a href="singleProductView.php" class="btn btn-sm text-dark fw-semibold" style="background-color: #f0df0d;">Buy Now</a>
+                                                            </div>
+                                                            <div class="col-12 d-grid mb-3 mt-1">
+                                                                <a class="btn btn-sm text-white" style="background-color: #008000;">Add To Cart &nbsp; <i class="bi bi-cart-plus fs-6"></i></a>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
                                                 </div>
                                             </div>
-
                                         </div>
-                                    </div>
+                                        <div class="item m-3">
+                                            <div class="row justify-content-center">
 
-                                    <div class="card col-lg-2 col-md-4 col-5">
-                                        <img src="resources/purplecabbage.png" style="" class="card-img-top" alt="...">
+                                                <div class="card owlCard">
 
-                                        <div class="col-12 text-center" style="height: 50px;">
-                                            <span class="card-title fs-6">PURPLE CABBAGE - 250g</span><br>
-                                        </div>
+                                                    <img src="resources/broccali.png" class="card-img-top" alt="">
 
-                                        <div class="col-12 text-center">
-                                            <span class="fw-semibold">Rs.230.00</span><br>
-                                            <span class=" text-success">4 Items Available</span>
-                                            <div class="row">
-                                            <div class="col-12 d-grid mt-1">
-                                            <a href="singleProductView.php" class="btn btn-sm text-dark fw-semibold" style="background-color: #f0df0d;">Buy Now</a>
-                                                </div>
-                                                <div class="col-12 d-grid mb-3 mt-1">
-                                                    <button class="btn btn-sm text-white" style="background-color: #008000;">Add To Cart &nbsp; <i class="bi bi-cart-plus fs-6"></i></button>
+                                                    <div class="col-12 text-center" style="height: 50px;">
+                                                        <span class="card-title fs-6">BROCCALI - (250g)</span><br>
+                                                    </div>
+
+                                                    <div class="col-12 text-center">
+                                                        <span class="fw-semibold">Rs.150.00</span><br>
+                                                        <span class=" text-success">12 Items Available</span>
+                                                        <div class="row">
+                                                            <div class="col-12 d-grid mt-1">
+                                                                <a href="singleProductView.php" class="btn btn-sm text-dark fw-semibold" style="background-color: #f0df0d;">Buy Now</a>
+                                                            </div>
+                                                            <div class="col-12 d-grid mb-3 mt-1">
+                                                                <a class="btn btn-sm text-white" style="background-color: #008000;">Add To Cart &nbsp; <i class="bi bi-cart-plus fs-6"></i></a>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
                                                 </div>
                                             </div>
-
                                         </div>
+                                        <div class="item m-3">
+                                            <div class="row justify-content-center">
+
+                                                <div class="card owlCard">
+
+                                                    <img src="resources/redBellpepper.png" class="card-img-top" alt="">
+
+                                                    <div class="col-12 text-center" style="height: 50px;">
+                                                        <span class="card-title fs-6">BELL PEPPER - RED (250g)</span><br>
+                                                    </div>
+
+                                                    <div class="col-12 text-center">
+                                                        <span class="fw-semibold">Rs.170.00</span><br>
+                                                        <span class=" text-success">15 Items Available</span>
+                                                        <div class="row">
+                                                            <div class="col-12 d-grid mt-1">
+                                                                <a href="singleProductView.php" class="btn btn-sm text-dark fw-semibold" style="background-color: #f0df0d;">Buy Now</a>
+                                                            </div>
+                                                            <div class="col-12 d-grid mb-3 mt-1">
+                                                                <a class="btn btn-sm text-white" style="background-color: #008000;">Add To Cart &nbsp; <i class="bi bi-cart-plus fs-6"></i></a>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="item m-3">
+                                            <div class="row justify-content-center">
+
+                                                <div class="card owlCard">
+
+                                                    <img src="resources/purplecabbage.png" class="card-img-top" alt="">
+
+                                                    <div class="col-12 text-center" style="height: 50px;">
+                                                        <span class="card-title fs-6">PURPLE BABBAGE - (250g)</span><br>
+                                                    </div>
+
+                                                    <div class="col-12 text-center">
+                                                        <span class="fw-semibold">Rs.260.00</span><br>
+                                                        <span class=" text-success">2 Items Available</span>
+                                                        <div class="row">
+                                                            <div class="col-12 d-grid mt-1">
+                                                                <a href="singleProductView.php" class="btn btn-sm text-dark fw-semibold" style="background-color: #f0df0d;">Buy Now</a>
+                                                            </div>
+                                                            <div class="col-12 d-grid mb-3 mt-1">
+                                                                <a class="btn btn-sm text-white" style="background-color: #008000;">Add To Cart &nbsp; <i class="bi bi-cart-plus fs-6"></i></a>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        
+                                        <!-- Seasonal Products -->
                                     </div>
-
-
-                                    <div class="col-12 text-center mt-1">
-                                        <a class="fs-6">See All</a>
-                                    </div>
-
-
                                 </div>
+
+                                <div class="col-12 text-center mt-1">
+                                    <a class="fs-6">See All</a>
+                                </div>
+
                             </div>
                         </div>
                     </div>
-                    <!-- Start Seasonal Product Div -->
+                    <!-- End Seasonal Product Div -->
+                    
 
                     <div class=" col-12  p-0">
                         <img src="resources/banner2.png" style="width: 100%;">
@@ -233,7 +270,10 @@
 
     </div>
     <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/owl.js"></script>
 </body>
 
 </html>
