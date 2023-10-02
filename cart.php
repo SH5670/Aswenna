@@ -1,3 +1,11 @@
+<?php
+
+session_start();
+// if(isset($_SESSION["u"])){}
+require "connection.php";
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,48 +35,66 @@
             <div class="col-lg-9 col-11 mt-2">
                 <div class="row gap-2 justify-content-center">
 
+                    <?php
 
-                    <!-- product Card -->
-                    <div class="card mb-3" style="max-width: 480px;">
-                        <div class="row g-0">
+                    $cart_rs = Database::search("SELECT * FROM `cart` WHERE `user_id`='" . $_SESSION["u"]["id"] . "'");
+                    $cart_num = $cart_rs->num_rows;
 
-                            <div class="col-12 d-lg-none d-md-none d-block mt-2">
-                                <div class="row">
-                                    <div class="col-12 text-end ">
-                                        <span><i class="bi bi-x-circle"></i></span>
-                                    </div>
+                    for ($x = 0; $x < $cart_num; $x++) {
+                        $cart_data = $cart_rs->fetch_assoc();
+                    ?>
+                        <!-- product Card -->
+                        <div class="card mb-3" style="max-width: 480px;">
+                            <div class="row g-0">
 
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <img src="resources/yellowBellpepper.png" class="img-fluid rounded-start" alt="...">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <div class="col-12">
-                                        <div class="row">
-                                            <div class="col-12 text-end d-lg-block d-md-block d-none">
-                                                <span><i class="bi bi-x-circle"></i></span>
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                    <span class="card-title fs-6 fw-semibold">BELL PEPPER - YELLOW (250g)</span><br><br>
-                                    <span class="card-title fs-6 text-success fw-semibold">In Stock - 97 Packs Available</span><br>
-                                    <span class="card-title fs-6 text-danger fw-semibold">Rs.250.00</span><br>
+                                <div class="col-12 d-lg-none d-md-none d-block mt-2">
                                     <div class="row">
-                                        <div class="col-12 mt-2">
+                                        <div class="col-12 text-end ">
+                                            <span><i class="bi bi-x-circle"></i></span>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <?php
+
+                                    $img_rs = Database::search("SELECT * FROM `productimage` WHERE `product_id`='" . $cart_data["product_id"] . "'");
+                                    $img_data = $img_rs->fetch_assoc();
+                                    ?>
+                                    <img src="<?php echo ($img_data["path"]); ?>" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <div class="col-12">
                                             <div class="row">
-                                                <div class="col-4">
-                                                    <input type="number" class="form-control form-control-sm col-1" value="1">
+                                                <div class="col-12 text-end d-lg-block d-md-block d-none">
+                                                    <span><i class="bi bi-x-circle"></i></span>
                                                 </div>
-                                                <div class="col-4 d-grid">
-                                                    <button class="btn btn-success btn-sm ">Buy Now</button>
-                                                </div>
-                                                <div class="col-1 d-grid ">
-                                                    <button class="btn btn-light btn-sm "><i class="bi bi-heart-fill text-danger"></i></button>
+
+                                            </div>
+                                        </div>
+
+                                        <?php
+                                        $product_rs = Database::search("SELECT * FROM `product` WHERE `id`='" . $cart_data["product_id"] . "'");
+                                        $product_data = $product_rs->fetch_assoc();
+                                        ?>
+
+                                        <span class="card-title fs-6 fw-semibold"><?php echo $product_data["name"]; ?></span><br><br>
+                                        <span class="card-title fs-6 text-success fw-semibold">In Stock - <?php echo $product_data["qty"]; ?> Packs Available</span><br>
+                                        <span class="card-title fs-6 text-danger fw-semibold">Rs.<?php echo $product_data["price"]; ?>.00</span><br>
+                                        <div class="row">
+                                            <div class="col-12 mt-2">
+                                                <div class="row">
+                                                    <div class="col-4">
+                                                        <input type="number" class="form-control form-control-sm col-1" value="1">
+                                                    </div>
+                                                    <div class="col-4 d-grid">
+                                                        <button class="btn btn-success btn-sm ">Buy Now</button>
+                                                    </div>
+                                                    <div class="col-1 d-grid ">
+                                                        <button class="btn btn-light btn-sm "><i class="bi bi-heart-fill text-danger"></i></button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -76,66 +102,23 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- product Card -->
+                        <!-- product Card -->
+                    <?php
 
-                    <!-- product Card -->
-                    <div class="card mb-3" style="max-width: 480px;">
-                        <div class="row g-0">
-
-                            <div class="col-12 d-lg-none d-md-none d-block mt-2">
-                                <div class="row">
-                                    <div class="col-12 text-end ">
-                                        <span><i class="bi bi-x-circle"></i></span>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <img src="resources/broccali.png" class="img-fluid rounded-start" alt="...">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <div class="col-12">
-                                        <div class="row">
-                                            <div class="col-12 text-end d-lg-block d-md-block d-none">
-                                                <span><i class="bi bi-x-circle"></i></span>
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                    <span class="card-title fs-6 fw-semibold">BELL PEPPER - YELLOW (250g)</span><br><br>
-                                    <span class="card-title fs-6 text-success fw-semibold">In Stock - 97 Packs Available</span><br>
-                                    <span class="card-title fs-6 text-danger fw-semibold">Rs.250.00</span><br>
-                                    <div class="row">
-                                        <div class="col-12 mt-2">
-                                            <div class="row">
-                                                <div class="col-4">
-                                                    <input type="number" class="form-control form-control-sm col-1" value="1">
-                                                </div>
-                                                <div class="col-4 d-grid">
-                                                    <button class="btn btn-success btn-sm ">Buy Now</button>
-                                                </div>
-                                                <div class="col-1 d-grid ">
-                                                    <button class="btn btn-light btn-sm "><i class="bi bi-heart-fill text-danger"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- product Card -->
-
-
-
+                    }
+                    ?>
                 </div>
             </div>
             <!-- End product List Div -->
 
+            <?php 
+            $shipping;
+            $subtotal;
+            $total;
+
+            $subtotal =
+            
+            ?>
 
             <!-- Start Checkout Div -->
             <div class="col-lg-3 col-11 mt-2 mb-4">
@@ -151,7 +134,7 @@
                             <hr class="col-11">
 
                             <div class="col-12 mt-3">
-                                <span>Products (2)</span>
+                                <span>Products (<?php echo $cart_num; ?>)</span>
                             </div>
 
                             <div class="col-12 mt-3">
