@@ -1,0 +1,34 @@
+.owl-prev {
+  position: absolute;
+  top: 40%;
+  left: 5%;
+}
+.owl-next {
+  position: absolute;
+  top: 40%;
+  right: 5%;
+}
+
+.owl-nav .owl-prev:hover, .owl-nav .owl-next:hover{
+
+  background: none !important;
+  outline: none !important;
+  opacity: 1;
+
+}
+
+.owl-nav .owl-prev,.owl-nav .owl-next{
+
+  outline: none;
+  opacity: 0.6;
+  transition: all .5s ease;
+
+}
+
+/* img{
+  width: 70%;
+} */
+
+
+
+

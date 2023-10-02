@@ -20,7 +20,7 @@ if (!empty($searchText)) {
 
 if ($district == "0" && $city == "0") {
 
-    $query .= " `type`='Farmer' AND ";
+    $query .= " `type`='Farmer'";
 }
 
 if ($district != "0" && $city == "0") {
@@ -52,12 +52,12 @@ if ($farmers_num != 0) {
             <img src="resources/user.jpg" style="" class="card-img-top" alt="...">
 
             <div class="col-12 text-center" style="height: 50px;">
-                <span class="card-title fs-6"><?php echo $farmers_data["fname"] . " " . $farmers_data["lname"] ?></span><br>
+                <span class="card-title fs-6"><?php echo $farmers_data["fname"]." ". $farmers_data["lname"]?></span><br>
             </div>
 
             <div class="col-12 text-center">
-                <span class="fw-semibold"><?php echo $farmers_data["dname"] ?></span><br>
-                <span class=" text-success"><?php echo $farmers_data["cname"] ?></span>
+                <span class="fw-semibold"><?php echo $farmers_data["dname"]?></span><br>
+                <span class=" text-success"><?php echo $farmers_data["cname"]?></span>
                 <div class="row">
                     <div class="col-12 d-grid mb-3 mt-1">
                         <button class="btn btn-sm text-dark fw-semibold" style="background-color: #e7dc18;">View Products</button>
@@ -73,5 +73,6 @@ if ($farmers_num != 0) {
 } else {
 
     //no farmers
-    echo ("0 farmers found!");
+    echo("0 farmers found!");
+
 }
